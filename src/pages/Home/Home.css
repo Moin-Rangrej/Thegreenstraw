@@ -1,0 +1,673 @@
+/* Home page CSS*/
+
+/* Section 1 start here */
+
+.homediv {
+    background-image: url('../../assets/images/HomeBG.png');
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 110px;
+}
+
+.homedata {
+    background: linear-gradient(111.58deg, #292929 0%, rgba(0, 0, 0, 0) 99.5%);
+    width: 100%;
+    height: 100%;
+    padding-top: 150px;
+    padding-left: 50px;
+}
+
+.Home_heading {
+    color: #91C13A;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 0.01em;
+}
+
+.Home_pera {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 36px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+}
+
+.explorebtn {
+    border: 1px solid #91C13A;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 55px 10px;
+    letter-spacing: 0.01em;
+    color: #91C13A;
+    background: transparent;
+}
+
+@media only screen and (max-width: 420px) {
+    .homediv {
+        height: auto;
+        margin-top: 110px;
+    }
+
+    .Home_heading {
+        font-size: 1.5rem;
+        line-height: 35px;
+        margin-bottom: 10px;
+    }
+
+    .Home_pera {
+        font-size: 1rem;
+        line-height: 25px;
+        letter-spacing: 0.01em;
+        margin-bottom: 20px;
+
+    }
+
+    .explorebtn {
+        margin-bottom: 20px;
+    }
+}
+
+/* Section2 Start Here */
+
+.greenstarwHeading {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 72px;
+    letter-spacing: 0.01em;
+    color: #91C13A;
+}
+
+.greenstarwPera {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 43px;
+    letter-spacing: 0.05em;
+    color: #292929;
+    margin: 25px 250px 75px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .greenstarwPera {
+        margin: 25px 150px 75px;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .greenstarwPera {
+        font-size: 1.2rem;
+        margin: 25px 100px 75px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (min-width: 374px) and (max-width: 576px) {
+
+    .greenstarwHeading {
+        font-size: 2rem;
+    }
+
+    .greenstarwPera {
+        font-size: 1.2rem;
+        margin: 20px 50px 75px;
+        line-height: 20px;
+    }
+}
+
+/* Section 3 start here */
+
+.section3 {
+    background-image: url('../../assets/images/ServiceBG.png');
+    max-height: max-content;
+    max-width: max-content;
+}
+
+.servicesHeading {
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 72px;
+    letter-spacing: 0.01em;
+    color: #91C13A;
+}
+
+.servicesPera {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 43px;
+    letter-spacing: 0.05em;
+    color: #292929;
+    width: auto;
+    margin: 0px 280px 30px;
+}
+
+.serviceType {
+    padding: 50px 0px;
+}
+
+.stores {
+    background: linear-gradient(180deg, #E7E7E7 0%, rgba(231, 231, 231, 0) 100%);
+    width: 350px;
+    height: 380px;
+    margin: 20px;
+    /* border: 1px solid black; */
+}
+
+.serviceTypeHeading {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 51px;
+    letter-spacing: 0.01em;
+    color: #292929;
+}
+
+.serviceTypePera {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: #8B8B8B;
+}
+
+.servicebtn {
+    background: #91C13A;
+    border: 1px solid #91C13A;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    padding: 5px 40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .servicesHeading {
+        font-size: 2.5rem;
+    }
+
+    .servicesPera {
+        line-height: 30px;
+        margin: 30px 100px 30px;
+    }
+}
+
+@media only screen and (min-width: 374px) and (max-width: 576px) {
+
+    .servicesHeading {
+        font-size: 2rem;
+    }
+
+    .servicesPera {
+        font-size: 1rem;
+        line-height: 20px;
+        margin: 10px 50px 10px;
+        letter-spacing: 0.05em;
+    }
+
+    .serviceTypeHeading {
+        font-weight: 600;
+        font-size: 1.3rem;
+        line-height: 30px;
+        letter-spacing: 0.01em;
+    }
+
+}
+
+/* Section4 start here */
+
+.Restaurant {
+    height: 500px;
+}
+
+.WhatwedoHeading {
+    font-weight: 700;
+    font-size: 3.75rem;
+    line-height: 90px;
+    letter-spacing: 0.01em;
+    color: #91C13A;
+}
+
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+.card {
+    border: none;
+}
+
+.btn-link {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #292929;
+    background-color: transparent;
+}
+
+.cardData {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    color: #8B8B8B;
+}
+
+.accordianArrow{
+    transform: rotate(50deg);
+    color: #91C13A;
+}
+
+/* section5 start here */
+
+.abc {
+    background: url('../../assets/images/Services/place.png');
+    /* max-height: auto; */
+    /* max-width: auto; */
+    width: 100%;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+.workareaHeading {
+    font-weight: 500;
+    font-size: 2.12rem;
+    line-height: 51px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    padding: 80px 50px;
+
+}
+
+.authorname {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 36px;
+    letter-spacing: 0.01em;
+    color: #91C13A;
+    float: right;
+    padding: 0px 40px;
+}
+
+@media only screen and (max-width: 1550px) {
+    .workareaHeading {
+        font-size: 2rem;
+        padding: 50px 50px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .abc {
+        background-image: url('../../assets/images/Services/place.png');
+        /* max-height: auto; */
+        /* max-width: auto; */
+        width: 100%;
+        max-height: max-content;
+        height: 30vh;
+    }
+
+    .workareaHeading {
+        font-size: 2rem;
+        padding: 30px 50px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .abc {
+        background-image: url('../../assets/images/Services/place.png');
+        background-size: auto;
+        max-width: auto;
+        max-height: max-content;
+    }
+
+    .workareaHeading {
+        font-size: 1.5rem;
+        line-height: 20px;
+        padding: 30px 50px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .abc {
+        background-image: url('../../assets/images/Services/place.png');
+        background-size: auto;
+        height: 15vh;
+    }
+
+    .workareaHeading {
+        font-size: 1rem;
+        line-height: 20px;
+        padding: 30px 50px;
+    }
+
+    .authorname {
+        font-weight: 500;
+        font-size: 1rem;
+        padding-bottom: 20px;
+        float: left;
+        padding: 0px 40px;
+    }
+
+}
+
+@media only screen and (max-width: 374px) {
+    .abc {
+        background-image: url('../../assets/images/Services/place.png');
+        background-size: auto;
+        height: 20vh;
+    }
+
+    .workareaHeading {
+        font-size: 13px;
+        line-height: 25px;
+        padding: 50px 50px;
+    }
+
+    .authorname {
+        font-weight: 500;
+        font-size: 1rem;
+        padding-bottom: 20px;
+    }
+
+}
+
+/* Section6 start here */
+
+.section6 {
+    background-image: url('../../assets/images/Services/peroplesay.png');
+    max-height: max-content;
+    /* max-width: max-content; */
+    /* height: 100vh;*/
+    width: 100%;
+}
+
+.peoplesaydiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.peoplesayHead {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 72px;
+    letter-spacing: 0.01em;
+    color: #91C13A;
+}
+
+.peoplesayPera {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 50px;
+    letter-spacing: 0.01em;
+    color: #8B8B8B;
+}
+
+.clientname {
+    font-family: 'Princess Sofia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.12rem;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+.client {
+    color: #91C13A;
+    padding-bottom: 30px;
+}
+
+.Leftcout {
+    position: relative;
+    right: 560px;
+    top: 25px;
+}
+
+.Rigthcout {
+    position: relative;
+    left: 380px;
+    bottom: 40px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .peoplesayHead {
+        font-size: 2.5rem;
+        line-height: 42px;
+    }
+
+    .peoplesayPera {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 30px;
+    }
+
+    .Leftcout {
+        position: relative;
+        right: 500px;
+        top: 25px;
+    }
+
+    .Rigthcout {
+        left: 300px;
+        bottom: 25px;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 1070px) {
+    .peoplesayPera {
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 30px;
+    }
+
+    .Leftcout {
+        position: relative;
+        right: 480px;
+        top: 25px;
+        height: 50px;
+    }
+
+    .Rigthcout {
+        position: relative;
+        left: 160px;
+        bottom: 40px;
+        padding: 20px;
+        height: 80px;
+    }
+
+}
+
+@media only screen and (max-width: 991px) {
+
+    .Leftcout {
+        position: relative;
+        right: 320px;
+        height: 30px;
+    }
+
+    .Rigthcout {
+        position: relative;
+        left: 310px;
+        bottom: 40px;
+        padding: 20px;
+        height: 70px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .Leftcout {
+        position: relative;
+        right: 240px;
+        height: 30px;
+    }
+
+    .Rigthcout {
+        position: relative;
+        left: 150px;
+        bottom: 40px;
+        padding: 20px;
+        height: 70px;
+    }
+
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 766px) {
+
+    .Leftcout {
+        position: relative;
+        right: 170px;
+        top: auto;
+        height: 20px;
+    }
+
+    .Rigthcout {
+        position: relative;
+        left: 150px;
+        bottom: 40px;
+        padding: 20px;
+        height: 60px;
+    }
+
+}
+
+/* section7 start here */
+
+.section7 {
+    background: url('../../assets/images/stayconnect.png');
+    height: 50vh;
+    width: 100%;
+    /* max-height: max-content; */
+    /* max-width: max-content; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stayconnect {
+    font-weight: 900;
+    font-size: 2.87rem;
+    line-height: 69px;
+    letter-spacing: 0.11em;
+    color: #91C13A;
+}
+
+.connect {
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.subscribePera {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.inputmail {
+    width: 300px;
+    text-align: center;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    background: transparent;
+    position: relative;
+    top: 90px;
+    left: 50px;
+    color: white;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #91C13A;
+    opacity: 1;
+}
+
+.inputmail:focus {
+    outline: none;
+}
+
+.subscribebtn {
+    position: relative;
+    top: 90px;
+    left: 50px;
+    border: 1px solid #91C13A;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #91C13A;
+    padding: 5px 35px 5px;
+    background: transparent;
+    margin-left: 50px;
+}
+
+@media only screen and (max-width: 991px) {
+
+    .section7 {
+        height: 30vh;
+        background-size: auto;
+    }
+
+    .stayconnect {
+        font-weight: 900;
+        font-size: 2rem;
+        line-height: 40px;
+        letter-spacing: 0.11em;
+    }
+
+    .inputmail {
+        position: relative;
+        top: 10px;
+        left: 0px;
+    }
+
+    .subscribebtn {
+        position: relative;
+        top: 80px;
+        left: -350px;
+
+        border: 1px solid #91C13A;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 30px;
+        letter-spacing: 0.01em;
+        color: #91C13A;
+        padding: 5px 35px 5px;
+        background: transparent;
+        margin-left: 50px;
+    }
+
+}
+
+/* section8 start here */
+
+.clientname {
+    font-family: 'Princess Sofia';
+    color: #91C13A;
+    font-weight: 400;
+    font-size: 2.12rem;
+    line-height: 50px;
+    letter-spacing: 0.01em;
+}

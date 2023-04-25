@@ -1,0 +1,56 @@
+.gsHeading {
+    color: green !important;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+.navbartitle {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white !important;
+    margin-right: 50px;
+}
+
+.contactbtn {
+    background: #91C13A;
+    border-radius: 4px;
+    padding: 10px 30PX;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+    letter-spacing: 0.01rem;
+}
+
+.nav-link:hover {
+    color: #91C13A !important;
+}
+
+.dropdown-text {
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 39px;
+    color: #FFFFFF !important;
+}
+
+.dropdown-text a:hover{
+    color: #91C13A;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.dropdown-menu{
+    background-color: #343a40;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: #343a40;
+}
