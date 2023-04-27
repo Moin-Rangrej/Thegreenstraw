@@ -12,13 +12,27 @@ import Rigthcout from '../../assets/images/Services/rigthd_cout.png'
 
 
 export default function Home() {
-    const [arrow,setarrow] = useState()
+    const [arrow,setarrow] = useState(false)
+    const [arrow1,setarrow1] = useState(false)
+    const [arrow2,setarrow2] = useState(false)
+    const [arrow3,setarrow3] = useState(false)
 
-    if (arrow === true) {
-        setarrow(true)
+
+    const updateArrow = () => {
+        setarrow(arrow =>  !arrow)
     }
-    else{
-        setarrow(false)
+
+    const updateArrow1 = () => {
+        setarrow1(arrow1 => !arrow1)
+    }
+
+    const updateArrow2 = () => {
+        setarrow2(arrow2 => !arrow2)
+    }
+
+    
+    const updateArrow3 = () => {
+        setarrow3(arrow3 => !arrow3)
     }
 
     return (
@@ -47,7 +61,7 @@ export default function Home() {
 
                 <section className='section2'>
                     <div className='greenstarw'>
-                        <h1 className='greenstarwHeading text-center m-5'>
+                        <h1 className='greenstarwHeading text-center m-4'>
                             The Greenstraw
                         </h1>
                         <p className='greenstarwPera text-center'>
@@ -62,10 +76,10 @@ export default function Home() {
 
                 {/* Section3 start here */}
 
-                <section className='section3'>
+                <section className='section3' id='services'>
 
                     <div className='servicepage d-flex flex-column flex-wrap'>
-                        <h1 className='text-center servicesHeading p-5'>
+                        <h1 className='text-center servicesHeading p-4'>
                             Services We Offer
                         </h1>
                         <p className='text-center servicesPera'>
@@ -136,13 +150,13 @@ export default function Home() {
                                     <div className="card-header" id="headingOne">
                                         <h5 className="mb-0">
                                             <button className="btn btn-link " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                <i className={arrow ? 'fa fa-chevron-circle-right pr-3 accordianArrow' : 'fa fa-chevron-circle-right pr-3'} aria-hidden="true" />
-                                                Events and Workshops accordianArrow
+                                                <i className={arrow ? "fa fa-chevron-circle-right pr-3 accordianArrow" : "fa fa-chevron-circle-down pr-3 accordianArrow" } onClick={updateArrow} aria-hidden="true" />
+                                                Events and Workshops
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                                        <div className="card-body cardData">
+                                        <div className="card-body cardData ml-4">
                                             We design and implement awareness campaigns by identifying various environmental factors that needs to be addressed in our communities
                                         </div>
                                     </div>
@@ -151,13 +165,14 @@ export default function Home() {
                                     <div className="card-header" id="headingTwo">
                                         <h5 className="mb-0">
                                             <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                <i className="fa fa-chevron-circle-right pr-3 accordianArrow" aria-hidden="true" />
+                                                <i className={arrow1 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow" } onClick={updateArrow1} aria-hidden="true" />
+                                                {/* <i className= "fa fa-chevron-circle-right pr-3 accordianArrow" aria-hidden="true" /> */}
                                                 <span>Sustainability Models</span>
                                             </button>
                                         </h5>
                                     </div>
-                                    <div id="collapseTwo" className="collapse in" aria-labelledby="headingTwo" data-parent="#accordion">
-                                        <div className="card-body cardData">
+                                    <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                        <div className="card-body cardData ml-4">
                                             We design and implement awareness campaigns by identifying various environmental factors that needs to be addressed in our communities
                                         </div>
                                     </div>
@@ -166,13 +181,14 @@ export default function Home() {
                                     <div className="card-header" id="headingThree">
                                         <h5 className="mb-0">
                                             <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                <i className="fa fa-chevron-circle-right pr-3 accordianArrow" aria-hidden="true" />
+                                            <i className={arrow2 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow" } onClick={updateArrow2} aria-hidden="true" />
+                                                {/* <i className= "fa fa-chevron-circle-right pr-3 accordianArrow" aria-hidden="true" /> */}
                                                 Low waste product curation and consulting
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                        <div className="card-body cardData">
+                                        <div className="card-body cardData ml-4">
                                             We design and implement awareness campaigns by identifying various environmental factors that needs to be addressed in our communities
                                         </div>
                                     </div>
@@ -181,13 +197,13 @@ export default function Home() {
                                     <div className="card-header" id="headingThree">
                                         <h5 className="mb-0">
                                             <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                <i className="fa fa-chevron-circle-right pr-3 accordianArrow" aria-hidden="true" />
+                                                <i className={arrow3 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow" } onClick={updateArrow3} aria-hidden="true" />
                                                 Awareness Campaigns
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                        <div className="card-body cardData">
+                                        <div className="card-body cardData ml-4">
                                             We design and implement awareness campaigns by identifying various environmental factors that needs to be addressed in our communities
                                         </div>
                                     </div>
@@ -251,7 +267,7 @@ export default function Home() {
                 {/* section8 start here */}
 
                 <section className='section8 container'>
-                    <div className='clientsnames d-flex justify-content-between flex-wrap py-5 my-2'>
+                    <div className='clientsnames d-flex justify-content-between flex-wrap py-5 my-3'>
                         <h1 className='clientname'>Cameron <p>Williamson</p></h1>
                         <h1 className='clientname'>Leslie <p>Alexander</p></h1>
                         <h1 className='clientname'>Darlene <p>Robertson</p></h1>

@@ -1,7 +1,12 @@
 .gsHeading {
-    color: green !important;
+    color: #91C13A !important;
+    font-size: 1.5rem;
     margin-left: 10px;
     font-weight: 600;
+}
+
+.logoText{
+    margin: 0px 120px;
 }
 
 p{
@@ -26,6 +31,7 @@ p{
     line-height: 21px;
     color: #FFFFFF;
     letter-spacing: 0.01rem;
+    cursor: pointer;
 }
 
 .nav-link:hover {
@@ -53,4 +59,31 @@ p{
 
 .dropdown-item:focus, .dropdown-item:hover {
     background-color: #343a40;
+}
+
+@media only screen and (max-width: 576px){
+    .logoText{
+        margin: 0px 0px;
+    }
+   
+    .gsHeading {
+        font-size: 22px;
+        margin-left: 0px;
+        font-weight: 600;
+    }
+    
+}
+
+@media only screen and (min-width: 120px) and (max-width: 360px){
+    
+    .Greenstrawlogo{
+        height: 40px;
+    }
+   
+    .gsHeading {
+        font-size: 18px;
+        margin-left: 0px;
+        font-weight: 600;
+    }
+    
 }

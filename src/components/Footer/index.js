@@ -18,11 +18,11 @@ export default function Footer() {
         <div className='footerParent '>
             <div className=' p-5 row'>
                 <div className='child1 col-lg-4 my-3'>
-                    <div className='gsImages mx-4'>
+                    <div className='gsImages'>
                         <img src={GSimage} className='The greenstarw' />
                         <a className="navbar-brand gsHeading" href="#">THE GREENSTRAW</a>
                     </div>
-                    <p className='footerpara px-5'>
+                    <p className='footerpara mx-2'>
                         The Greenstraw is an initiative to create a community of conscious and conscientious
                         individuals by curating low waste and interactive solutions to everyday things
                         to bring about a sustainable behavioral change.
@@ -45,7 +45,7 @@ export default function Footer() {
                             </p>
                         </div>
                         <div className='Addressdiv'>
-                            <img src={Mail} />
+                            <img src={Mail} alt='mail' className='mymail'/>
                             <p className='Address'>
                                 +97-78686 79799
                             </p>
