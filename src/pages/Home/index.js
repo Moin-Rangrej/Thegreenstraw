@@ -78,13 +78,13 @@ export default function Home() {
 
                 <section className='section3' id='services'>
 
-                    <div className='servicepage d-flex flex-column flex-wrap'>
-                        <h1 className='text-center servicesHeading p-4'>
+                    <div className='servicepage d-flex justify-content-center align-items-center flex-wrap'>
+                        <h1 className=' servicesHeading p-4'>
                             Services We Offer
                         </h1>
-                        <p className='text-center servicesPera'>
+                        <p className='servicesPera'>
                             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                            Velit officia consequat duis enim velit mollit.
+                                    Velit officia consequat duis enim velit mollit.
                         </p>
                     </div>
                     <div className='serviceType d-flex justify-content-center flex-wrap'>

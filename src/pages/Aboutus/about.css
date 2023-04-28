@@ -32,6 +32,14 @@
     color: #FFFFFF;
 }
 
+@media only screen and (min-width: 280px) and (max-width: 576px) {
+    .aboutusHeading {
+        font-size: 3.5rem;
+        padding-bottom: 20px;
+    }
+    
+}
+
 /* Section2 start here */
 
 .aboutusSecTwohead {
@@ -70,6 +78,19 @@
     }
 }
 
+@media only screen and (min-width: 280px) and (max-width: 575px) {
+    .aboutusSecTwohead {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 42px;
+    }
+    .restauranrPera {
+        font-weight: 650;
+        font-size: 1rem;
+        line-height: 20px;
+    }
+    
+}
 
 /* Section3 start here */
 
@@ -118,15 +139,25 @@
         font-weight: 600;
         font-size: 1.2rem;
         line-height: 25px;
-        text-align: center;
-        letter-spacing: 0.05em;
-        color: #292929;
     }  
 }
 
 @media screen and (max-width: 480px) {
     .aboutusSecThreehead {
         font-size: 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 575px) {
+
+    .aboutusSecThreehead {
+        font-size: 2rem;
+    }
+    .aboutusSecThreePera {
+        width: 87%;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 25px;
     }
 }
 
@@ -201,6 +232,15 @@
     }
 }
 
+@media only screen and (min-width: 280px) and (max-width: 576px) {
+
+    .WhatwedoHeading {
+        font-size: 1.7rem;
+        line-height: 40px;
+    }
+
+}
+
 /* sectionFive start here */
 
 .aboutusSecFive {
@@ -250,26 +290,106 @@
     }
 }
 
-.custom-indicator li{
-    width: 10px;
+
+/* slick Crousel */
+
+/* .slick-arrow.slick-prev,
+.slick-arrow.slick-next{
+    background:#91C13A;
+} */
+
+/* .custom-indicator li{
     height: 50px;
-    width: 100%;
+    width: 50px;
+    border: 2px solid green;
+    
+} */
+
+.custom-indicator{
+    /* border: 2px solid green; */
+    bottom: -60px !important;
 }
 
-.slick-dots {
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 90px !important;
+    height: 20px;
+    margin: 0px 20px !important;
+    padding-top: -10px !important;
+    cursor: pointer;
+}
+
+.restaurantimg{
+    height: '80px' !important;
+    width: '120px' !important;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .restaurantimg{
+        padding-bottom: 50px;
+    }
+    .custom-indicator{
+        /* border: 2px solid green; */
+        bottom: -125px !important;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .restaurantimg{
+        padding-bottom: 50px;
+    }
+    .custom-indicator{
+        /* border: 2px solid green; */
+        bottom: -75px !important;
+    }
+      
+}
+
+/* padding = t-b r-l */
+
+@media only screen and (max-width: 768px) {
+    .restaurantimg{
+        padding: 20px 20px;
+    }
+    .custom-indicator{
+        /* border: 2px solid green; */
+        bottom: -45px !important;
+    }
+      
+}
+
+
+/* padding = t-b r-l */
+
+@media only screen and (max-width: 576px) {
+    .restaurantimg{
+        padding: 10px 20px;
+        display: none;
+    }  
+    
+    .slick-arrow.slick-prev,
+.slick-arrow.slick-next{
+    background:#91C13A;
+}
+
+}
+
+
+/* .slick-dots {
     position: absolute;
-    bottom: -70px !important;
     display: block;
     width: 100%;
     padding: 0;
     margin: 0;
     list-style: none;
     text-align: center;
-}
+} */
 
-.slick-dots li {
+/* .slick-dots li {
     padding: 50px !important;
     margin: 0;
     list-style: none;
     text-align: center;
-}
+} */

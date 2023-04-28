@@ -138,6 +138,17 @@
     }
 }
 
+@media only screen and (max-width: 280px) {
+    .greenstarwHeading {
+        font-size: 1.7rem;
+    }
+    .greenstarwPera {
+        font-size: 1rem;
+        margin: 10px 0px 55px;
+        line-height: 20px;
+    }
+}
+
 /* Section 3 start here */
 
 .section3 {
@@ -152,6 +163,7 @@
     line-height: 72px;
     letter-spacing: 0.01em;
     color: #91C13A;
+    
 }
 
 .servicesPera {
@@ -162,6 +174,7 @@
     color: #292929;
     width: auto;
     margin: 0px 280px 30px;
+    text-align: center !important;
 }
 
 .serviceType {
@@ -216,10 +229,10 @@
     }
 }
 
-@media only screen and (min-width: 374px) and (max-width: 576px) {
+@media only screen and (min-width: 280px) and (max-width: 576px) {
 
     .servicesHeading {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .servicesPera {
@@ -237,6 +250,7 @@
     }
 
 }
+
 
 /* Section4 start here */
 
@@ -305,6 +319,28 @@
         margin-left: 20px;
     }
 
+}
+
+@media only screen and (min-width: 280px) and (max-width: 576px) {
+
+    .Restaurant{
+        height: 250px;
+    }
+
+    .WhatwedoHeading {
+        font-weight: 700;
+        font-size: 1.7rem;
+        line-height: 50px;
+        margin-left: 20px;
+    }
+
+    #accordion{
+        margin-right: 20px;
+    }
+    .card .card-header{
+        margin-right: 20px;
+        font-size: 15px;
+    }
 }
 
 
@@ -402,11 +438,11 @@
 
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 280px)  and (max-width: 576px) {
     .abc {
         background-image: url('../../assets/images/Services/place.png');
         background-size: auto;
-        height: 25vh;
+        height: 35vh;
     }
 
     .workareaHeading {
@@ -589,6 +625,23 @@
         height: 60px;
     }
 
+}
+
+@media only screen and (max-width: 280px){
+    .Leftcout {
+        position: relative;
+        right: 120px;
+        top: auto;
+        height: 20px;
+    }
+
+    .Rigthcout {
+        position: relative;
+        left: 70px;
+        bottom: 30px;
+        padding: 20px;
+        height: 60px;
+    }
 }
 
 /* section7 start here */

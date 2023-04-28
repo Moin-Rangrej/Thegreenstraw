@@ -50,7 +50,7 @@
 }
 
 .mymail{
-    margin-left: -5px;
+    margin-left: -8px;
 }
 
 
@@ -73,5 +73,15 @@
 @media only screen and (max-width: 991px){
     .footerParent {
         height: auto;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .Thegreenstarw{
+        height: 30px;
+    }
+    .gsHeading{
+        font-size: 16px;
+        margin-left: 5px;   
     }
 }

@@ -19,7 +19,7 @@ export default function Footer() {
             <div className=' p-5 row'>
                 <div className='child1 col-lg-4 my-3'>
                     <div className='gsImages'>
-                        <img src={GSimage} className='The greenstarw' />
+                        <img src={GSimage} className='Thegreenstarw' />
                         <a className="navbar-brand gsHeading" href="#">THE GREENSTRAW</a>
                     </div>
                     <p className='footerpara mx-2'>

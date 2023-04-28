@@ -88,7 +88,7 @@ export default function Aboutus() {
 
         <section className='aboutusSecFour container'>
           <div className='row'>
-            <div className='col-lg-6 Whatwedo py-5 pr-2'>
+            <div className='col-lg-5 Whatwedo py-5 pr-2'>
               <h3 className='text-left WhatwedoHeading'>
                 What we do!
               </h3>
@@ -157,18 +157,19 @@ export default function Aboutus() {
                 </div>
               </div>
             </div>
-            <div className='col-lg-6'>
+            <div className='col-lg-7 py-5 pl-5'>
               <div style={{ margin: '30px' }}>
                 <h2>Custom Paging</h2>
                 <Slider 
                 autoplay 
                 autoplaySpeed={2000} 
-                dots 
-                initialSlide={2} 
+                dots={true}
+                initialSlide={0} 
                 infinite
                 customPaging={(i) => {
                     return(<div className='resIamges'>
-                          <img src={Images[i]} style={{objectFit: "cover"}}/>
+                          <img src={Images[i]} className='restaurantimg' style={{objectFit: "cover", height: '100px' , width: '120px'}}/>
+                          {/* {i} */}
                     </div>)
                 }}
                 dotsClass='slick-dots custom-indicator'
