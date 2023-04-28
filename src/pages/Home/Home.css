@@ -324,7 +324,11 @@
 @media only screen and (min-width: 280px) and (max-width: 576px) {
 
     .Restaurant{
-        height: 250px;
+        height: 350px;
+    }
+    
+    .accordion3{
+        margin-right: 20px;
     }
 
     .WhatwedoHeading {

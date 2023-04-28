@@ -151,7 +151,7 @@ export default function Home() {
                                         <h5 className="mb-0">
                                             <button className="btn btn-link " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                 <i className={arrow ? "fa fa-chevron-circle-right pr-3 accordianArrow" : "fa fa-chevron-circle-down pr-3 accordianArrow" } onClick={updateArrow} aria-hidden="true" />
-                                                Events and Workshops
+                                                <span>Events and Workshops</span>
                                             </button>
                                         </h5>
                                     </div>
@@ -182,13 +182,15 @@ export default function Home() {
                                         <h5 className="mb-0">
                                             <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                             <i className={arrow2 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow" } onClick={updateArrow2} aria-hidden="true" />
-                                                {/* <i className= "fa fa-chevron-circle-right pr-3 accordianArrow" aria-hidden="true" /> */}
-                                                Low waste product curation and consulting
+                                                <span className='accordion3'>Low waste product curation and consulting</span>
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                                         <div className="card-body cardData ml-4">
+                                            We design and implement awareness campaigns by identifying various environmental factors that needs to be addressed in our communities
+                                            We design and implement awareness campaigns by identifying various environmental factors that needs to be addressed in our communities
+                                            We design and implement awareness campaigns by identifying various environmental factors that needs to be addressed in our communities
                                             We design and implement awareness campaigns by identifying various environmental factors that needs to be addressed in our communities
                                         </div>
                                     </div>
@@ -198,7 +200,7 @@ export default function Home() {
                                         <h5 className="mb-0">
                                             <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                                 <i className={arrow3 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow" } onClick={updateArrow3} aria-hidden="true" />
-                                                Awareness Campaigns
+                                                <span>Awareness Campaigns</span>
                                             </button>
                                         </h5>
                                     </div>

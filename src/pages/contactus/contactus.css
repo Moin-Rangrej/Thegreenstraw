@@ -1,5 +1,5 @@
 .contactBG {
-    background: url('../../assets/images/servicePage/serviceBG.png');
+    background: url('../../assets/images/servicePage/Gallerybg.png');
     /* max-width: max-content;
     max-height: max-content; */
     /* margin-top: 110px; */
@@ -34,23 +34,22 @@
 }
 
 @media screen and (max-width: 665px) {
-    .serviceHeading {
+    .contactHeading {
         font-size: 3rem;
     }
 }
 
 @media screen and (max-width: 576px) {
-    .serviceHeading {
-        font-size: 7.5vw;
+    .contactHeading {
+        font-size: 2.5rem;
     }
 
-    .servicePera {
+    .contactPera {
         font-weight: 500;
-        font-size: 4vw;
+        font-size: 1.25rem;
         line-height: 30px;
         text-align: center;
-        letter-spacing: 0.01em;
-        color: #292929;
+        margin: 0px 20px;
     }
 }
 
@@ -68,18 +67,183 @@
     color: #91C13A;
 }
 
-.infoBG{
+.infoBG {
     background: url('../../assets/images/Gallery/phone.png');
-    height: 50vh;
+    height: 45vh;
     background-size: cover;
     background-repeat: no-repeat;
     width: auto;
 }
 
-.phoneinfo{
+.phoneinfo {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.ownerInfo {
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 51px;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+.hrline2 {
+    border: 2px solid #91C13A;
+    width: 50px;
+}
+
+.companyInfo p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #8B8B8B;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .infoBG {
+        max-height: auto;
+        width: auto;
+    }
+
+    .getTouch {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 55px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .infoBG {
+        height: auto;
+        width: auto;
+        padding: 20px 0px;
+    }
+
+    .phoneinfo {
+        height: auto;
+        padding: 20px 0px;
+    }
+
+    .vl {
+        border: none;
+        height: auto;
+    }
+
+    .available {
+        text-align: center;
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .infoBG {
+        max-height: auto;
+        width: auto;
+    }
+}
+
+/* section3 start here */
+
+.userinput {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.namesfield {
+    height: 100%;
+}
+
+.firstname {
+    text-align: left;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    background: transparent;
+    padding: 10px 0px;
+    border-bottom: 2px solid #818E9B;
+    width: 300px;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+::placeholder {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    opacity: 1;
+}
+
+.firstname:focus {
+    outline: none;
+}
+
+.message {
+    text-align: left;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    background: transparent;
+    border-bottom: 2px solid #818E9B;
+    width: 300px;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+.message:focus {
+    outline: none;
+}
+
+textarea{
+    margin: 15px;
+}
+
+@media screen and (max-width: 991px){
+    textarea{
+        margin: 0px;
+    }
+    .firstname {
+        width: 500px;
+    }
+    .message{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .firstname {
+        width: 400px;
+        margin: 0px 10px;
+    }
+    .message{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .firstname {
+        width: 350px;
+        margin: auto;
+    }
 }
