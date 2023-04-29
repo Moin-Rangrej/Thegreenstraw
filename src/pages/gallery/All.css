@@ -1,0 +1,35 @@
+.second_divImges{
+    height: 95%;
+    width: 100%;
+}
+
+.second_divImges4{
+    height: 235px;
+    width: 250px;
+}
+
+.img1{
+    height: 270px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 991px) {
+
+    .img1{
+        height: 100%;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .second_divImges{
+        height: auto;
+        padding-bottom: 20px;
+    }
+    
+    .second_divImges4{
+        height: 100%;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+}

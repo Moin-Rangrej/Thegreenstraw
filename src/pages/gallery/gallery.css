@@ -70,5 +70,19 @@
     line-height: 40px;
     text-align: center;
     letter-spacing: 0.04em;
+    color: #292929;
+}
+
+.active:hover{
+    color: #292929 !important;
+}
+
+.active{
     color: #91C13A;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #292929 !important;
+    text-decoration: none;
 }

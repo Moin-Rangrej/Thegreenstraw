@@ -1,6 +1,7 @@
 import React from 'react'
 import './gallery.css'
 import Layout from '../../components/Layout'
+import { NavLink, Outlet } from 'react-router-dom'
 
 export default function Gallery() {
   return (
@@ -20,11 +21,12 @@ export default function Gallery() {
           <div className='galleryimagesSec'>
               <div className='container my-5'>
                 <div className='gallerypages d-flex justify-content-around flex-wrap'>
-                  <p className='imgpages'>ALL</p>
-                  <p className='imgpages'>Cafe's</p>
-                  <p className='imgpages'>Co-Working Space</p>
-                  <p className='imgpages'>Store's</p>
-                  </div>
+                  <NavLink to='all' className='imgpages'>ALL</NavLink>
+                  <NavLink to='cafes' className='imgpages'>Cafe's</NavLink>
+                  <NavLink to='cowork' className='imgpages'>Co-Working Space</NavLink>
+                  <NavLink to='store' className='imgpages'>Store's</NavLink>
+                </div>
+                  <Outlet />
                   
 
               </div>

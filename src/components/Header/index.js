@@ -13,8 +13,11 @@ export default function Header() {
                             <img src={Greenstrawlogo} alt='Greenstrawlogo' className='Greenstrawlogo'/>
                             <Link className="navbar-brand gsHeading" to='/'>THE GREENSTRAW</Link>
                         </div>
-                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon" />
+                        <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            {/* <span className="navbar-toggler-icon" /> */}
+                            <span className='toggler-icon top-bar'></span>
+                            <span className='toggler-icon middle-bar'></span>
+                            <span className='toggler-icon bottom-bar'></span>
                         </button>
 
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
