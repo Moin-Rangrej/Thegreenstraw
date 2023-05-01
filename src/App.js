@@ -9,6 +9,7 @@ import All from './pages/gallery/All';
 import Cafes from './pages/gallery/Cafes';
 import Cowork from './pages/gallery/Cowork';
 import Store from './pages/gallery/Store';
+import Gridall from './pages/gallery/Gridall';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'lightbox2/dist/css/lightbox.css'
@@ -37,3 +38,7 @@ function App() {
 }
 
 export default App;
+
+
+{/* <Route index element={<All/>}/>
+          <Route path='all' element={<All />} /> */}

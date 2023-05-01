@@ -10,8 +10,72 @@ import Img7 from '../../assets/images/Gallery/img7.png'
 import Img8 from '../../assets/images/Gallery/img8.png'
 import Img9 from '../../assets/images/Gallery/img9.png'
 import Img10 from '../../assets/images/Gallery/img10.png'
+import { motion } from 'framer-motion'
 
 export default function  All() {
+  
+    const animatefirstimg = {
+      hidden:{
+        opacity:0,
+        x: '-100vw'
+      },
+      visible:{
+        opacity:1,
+        x:0,
+        transition:{
+          type:'spring',
+          stiffness: 100,
+          duration: 0.5
+        }
+      }
+    }
+
+    const animatemenimg = {
+      hidden:{
+        opacity:0,
+        x: '-100vw'
+      },
+      visible:{
+        opacity:1,
+        x:0,
+        transition:{
+          type:'spring',
+          stiffness: 100,
+          duration: 0.5
+        }
+      }
+    }
+
+    const animaterightimg = {
+      hidden:{
+        opacity:0,
+        x: '100vw'
+      },
+      visible:{
+        opacity:1,
+        x:0,
+        transition:{
+          type:'spring',
+          stiffness: 100,
+          duration: 0.5
+        }
+      }
+    }
+    
+    const animatezoomimg = {
+      hidden:{
+        opacity:0,
+        scale: 0.5
+      },
+      visible:{
+        opacity:1,
+        scale:1,
+        transition:{
+          delay: 1
+        }
+      }
+    }
+
   return (
     <>
       <h1 className='text-center text-success py-4'>From All page</h1>
@@ -23,25 +87,41 @@ export default function  All() {
                 <div className='col'>
                   <div className='row-lg-6 no-gutters'>
                     <a href={Img1} data-lightbox="models" data-title="Caption1" className="myimg">
-                    <img src={Img1} alt='Img1' className='img1'/>
+                    <motion.img src={Img1} alt='Img1' className='img1'
+                      variants={animatefirstimg}
+                      initial="hidden"
+                      animate="visible"
+                    />
                     </a>
                   </div>
                   <div className='row-lg-6'>
                   <a href={Img2} data-lightbox="models" data-title="Caption2" className="myimg">
-                    <img src={Img2} alt='Img2' className='second_divImges'/>
+                    <motion.img src={Img2} alt='Img2' className='second_divImges'
+                      variants={animatemenimg}
+                      initial="hidden"
+                      animate="visible"
+                    />
                    </a> 
                   </div>
                 </div>
               </div>
               <div className='col-lg-6'>
               <a href={Img3} data-lightbox="models" data-title="Caption3" className="myimg">
-                <img src={Img3} alt='Img3' className='second_divImges'/>
+                <motion.img src={Img3} alt='Img3' className='second_divImges'
+                  variants={animatezoomimg}
+                  initial="hidden"
+                  animate="visible"
+                />
                </a> 
               </div>
             </div>
             <div>
             <a href={Img7} data-lightbox="models" data-title="Caption7" className="myimg">
-              <img src={Img7} alt='Img7' className='second_divImges'/>
+              <motion.img src={Img7} alt='Img7' className='second_divImges'
+              variants={animatemenimg}
+              initial="hidden"
+              animate="visible"
+              />
             </a>  
             </div>
           </div>
@@ -50,19 +130,31 @@ export default function  All() {
               <div className='col-lg-6 pl-0'>
                 <div className='col-lg-6 pl-3'>
                 <a href={Img4} data-lightbox="models" data-title="Caption4" className="myimg">
-                  <img src={Img4} alt='Img4' className='second_divImges4'/>
+                  <motion.img src={Img4} alt='Img4' className='second_divImges4'
+                    variants={animatezoomimg}
+                    initial="hidden"
+                    animate="visible"      
+                  />
                 </a>  
                 </div>
               </div>
               <div className='col-lg-6'>
               <a href={Img5} data-lightbox="models" data-title="Caption5" className="myimg">
-                <img src={Img5} alt='Img5' className='second_divImges'/>
+                <motion.img src={Img5} alt='Img5' className='second_divImges'
+                  variants={animaterightimg}
+                  initial="hidden"
+                  animate="visible"
+                />
               </a>  
               </div>
             </div>
             <div>
             <a href={Img6} data-lightbox="models" data-title="Caption6" className="myimg">
-              <img src={Img6} alt='Img6' className='second_divImges'/>
+              <motion.img src={Img6} alt='Img6' className='second_divImges'
+              variants={animaterightimg}
+              initial="hidden"
+              animate="visible"
+              />
             </a>  
             </div>
           </div>
@@ -71,17 +163,29 @@ export default function  All() {
         <div className='second_div row py-5'>
           <div className='second_divImges col-lg-3'>
           <a href={Img8} data-lightbox="models" data-title="Caption8" className="myimg">
-            <img src={Img8} alt='Img8' className='second_divImges'/>
+            <motion.img src={Img8} alt='Img8' className='second_divImges'
+            variants={animatemenimg}
+            initial="hidden"
+            animate="visible"
+            />
           </a>  
           </div>
           <div className='col-lg-6'>
           <a href={Img9} data-lightbox="models" data-title="Caption9" className="myimg">  
-            <img src={Img9} alt='Img9' className='second_divImges'/>
+            <motion.img src={Img9} alt='Img9' className='second_divImges'
+              variants={animatezoomimg}
+              initial="hidden"
+              animate="visible"
+            />
             </a>  
           </div>
           <div className='col-lg-3'>
           <a href={Img10} data-lightbox="models" data-title="Caption10" className="myimg">  
-            <img src={Img10} alt='Img10' className='second_divImges'/>
+            <motion.img src={Img10} alt='Img10' className='second_divImges'
+              variants={animaterightimg}
+              initial="hidden"
+              animate="visible"
+            />
           </a>  
           </div>
         </div>

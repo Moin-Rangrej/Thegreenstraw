@@ -15,7 +15,6 @@ import { Images } from './Restaurantimg'
 
 
 
-
 export default function Aboutus() {
 
   const [arrow, setarrow] = useState(false)
@@ -40,8 +39,15 @@ export default function Aboutus() {
     setarrow3(arrow3 => !arrow3)
   }
 
+  // crousel start
 
+  const [sliderdata, setSliderdata] = useState(Images[0])
 
+  const handleClick = (index) => {
+    console.log(index);
+    const slider = Images[index];
+    setSliderdata(slider);
+  }
 
   return (
     <>
@@ -157,31 +163,18 @@ export default function Aboutus() {
                 </div>
               </div>
             </div>
-            <div className='col-lg-7 py-5 pl-5'>
-              <div style={{ margin: '30px' }}>
-                <h2>Custom Paging</h2>
-                <Slider 
-                autoplay 
-                autoplaySpeed={2000} 
-                dots={true}
-                initialSlide={0} 
-                infinite
-                customPaging={(i) => {
-                    return(<div className='resIamges'>
-                          <img src={Images[i]} className='restaurantimg' style={{objectFit: "cover", height: '100px' , width: '120px'}}/>
-                          {/* {i} */}
-                    </div>)
-                }}
-                dotsClass='slick-dots custom-indicator'
-                >
-                    {
-                        Images.map((item,index) => 
-                          <div key={index}>
-                              <img src={item} style={{width: "100%" , height: '50vh'}}/>
-                          </div>
-                        )
-                    }
-                </Slider>
+            <div className='col-lg-7 py-5 pl-5 aboutresImages'>
+              <div>
+                <img src={sliderdata} className='slideImges img-responsive img-thumbnail'/>
+              </div >
+              <div className='smallresImg p-3'>
+                {
+                  Images.map((data, i) =>
+                    <div key={i}>
+                      <img src={data} onClick={() => handleClick(i)} height='70px' width="120px" className='img-thumbnail allimages'/>
+                    </div>
+                  )
+                }
               </div>
             </div>
           </div>
