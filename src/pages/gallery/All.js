@@ -22,25 +22,25 @@ export default function  All() {
               <div className='col-lg-6'>
                 <div className='col'>
                   <div className='row-lg-6 no-gutters'>
-                    <a href={Img1} data-lightbox="models" data-title="Caption1">
+                    <a href={Img1} data-lightbox="models" data-title="Caption1" className="myimg">
                     <img src={Img1} alt='Img1' className='img1'/>
                     </a>
                   </div>
                   <div className='row-lg-6'>
-                  <a href={Img2} data-lightbox="models" data-title="Caption2">
+                  <a href={Img2} data-lightbox="models" data-title="Caption2" className="myimg">
                     <img src={Img2} alt='Img2' className='second_divImges'/>
                    </a> 
                   </div>
                 </div>
               </div>
               <div className='col-lg-6'>
-              <a href={Img3} data-lightbox="models" data-title="Caption3">
+              <a href={Img3} data-lightbox="models" data-title="Caption3" className="myimg">
                 <img src={Img3} alt='Img3' className='second_divImges'/>
                </a> 
               </div>
             </div>
             <div>
-            <a href={Img7} data-lightbox="models" data-title="Caption7">
+            <a href={Img7} data-lightbox="models" data-title="Caption7" className="myimg">
               <img src={Img7} alt='Img7' className='second_divImges'/>
             </a>  
             </div>
@@ -49,19 +49,19 @@ export default function  All() {
             <div className='row'>
               <div className='col-lg-6 pl-0'>
                 <div className='col-lg-6 pl-3'>
-                <a href={Img4} data-lightbox="models" data-title="Caption4">
+                <a href={Img4} data-lightbox="models" data-title="Caption4" className="myimg">
                   <img src={Img4} alt='Img4' className='second_divImges4'/>
                 </a>  
                 </div>
               </div>
               <div className='col-lg-6'>
-              <a href={Img5} data-lightbox="models" data-title="Caption5">
+              <a href={Img5} data-lightbox="models" data-title="Caption5" className="myimg">
                 <img src={Img5} alt='Img5' className='second_divImges'/>
               </a>  
               </div>
             </div>
             <div>
-            <a href={Img6} data-lightbox="models" data-title="Caption6">
+            <a href={Img6} data-lightbox="models" data-title="Caption6" className="myimg">
               <img src={Img6} alt='Img6' className='second_divImges'/>
             </a>  
             </div>
@@ -70,17 +70,17 @@ export default function  All() {
         {/* second div images */}
         <div className='second_div row py-5'>
           <div className='second_divImges col-lg-3'>
-          <a href={Img8} data-lightbox="models" data-title="Caption8">
+          <a href={Img8} data-lightbox="models" data-title="Caption8" className="myimg">
             <img src={Img8} alt='Img8' className='second_divImges'/>
           </a>  
           </div>
           <div className='col-lg-6'>
-          <a href={Img9} data-lightbox="models" data-title="Caption9">  
+          <a href={Img9} data-lightbox="models" data-title="Caption9" className="myimg">  
             <img src={Img9} alt='Img9' className='second_divImges'/>
             </a>  
           </div>
           <div className='col-lg-3'>
-          <a href={Img10} data-lightbox="models" data-title="Caption10">  
+          <a href={Img10} data-lightbox="models" data-title="Caption10" className="myimg">  
             <img src={Img10} alt='Img10' className='second_divImges'/>
           </a>  
           </div>

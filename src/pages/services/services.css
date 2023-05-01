@@ -380,6 +380,12 @@
         letter-spacing: 0.05em;
         color: #292929;
     }
+    .sec3row_1{
+        flex-direction: column-reverse;
+    }
+    .sec3row_2{
+        flex-direction: column-reverse;
+    }
 }
 
 

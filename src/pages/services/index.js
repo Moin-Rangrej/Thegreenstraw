@@ -57,7 +57,7 @@ export default function Services() {
 
           <div className='sectionthree'>
             <div className='container'>
-              <div className='row '>
+              <div className='row sec3row_1'>
                 <div className='col-lg-6'>
                   <p className='p-xl-4 my-3 servicepara mx-1'>
                     We are a conscious low waste space where we try to our best to make sure we consume everything in the most sustainable way with the aim to make sure everything goes back to Mother Earth to give back more than we took...

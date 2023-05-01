@@ -355,7 +355,7 @@
     /* max-height: auto; */
     /* max-width: auto; */
     width: 100%;
-    height: 50vh;
+    min-height: 50vh;
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -421,7 +421,6 @@
 
 @media only screen and (max-width: 768px) {
     .abc {
-        background-image: url('../../assets/images/Services/place.png');
         background-size: auto;
         height: 15vh;
     }
@@ -442,9 +441,16 @@
 
 }
 
+@media screen and (max-width: 767px){
+    .abc {
+        background-size: auto;
+        height: 25vh;
+    }
+    
+}
+
 @media only screen and (min-width: 280px)  and (max-width: 576px) {
     .abc {
-        background-image: url('../../assets/images/Services/place.png');
         background-size: auto;
         height: 35vh;
     }
