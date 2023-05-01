@@ -76,6 +76,12 @@
     }
 }
 
+@media screen and (max-width: 576px) {
+    .gtr_gallery{
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 280px) {
     .Thegreenstarw{
         height: 30px;

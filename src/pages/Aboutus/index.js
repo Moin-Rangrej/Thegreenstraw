@@ -60,7 +60,7 @@ export default function Aboutus() {
           <h1 className='aboutusSecTwohead text-center m-5'>The Greenstraw</h1>
           <div className='my-5 row'>
             <img src={Restaurant} alt='RestaurantImage' className='col-lg-7' />
-            <p className='restauranrPera px-5 col-lg-5 py-md-4'>
+            <p className='restauranrPera col-lg-5 py-md-4'>
               The Greenstraw is an initiative to create a community of conscious and conscientious individuals
               by curating low waste and interactive solutions to everyday things to bring about a sustainable
               behavioral change.
@@ -255,3 +255,35 @@ export default function Aboutus() {
     </>
   )
 }
+
+
+
+
+
+{/* <div className='col-lg-7 py-5 pl-5'>
+              <div style={{ margin: '30px' }}>
+                <h2>Custom Paging</h2>
+                <Slider 
+                autoplay 
+                autoplaySpeed={2000} 
+                dots={true}
+                initialSlide={0} 
+                infinite
+                customPaging={(i) => {
+                    return(<div className='resIamges'>
+                          <img src={Images[i]} className='restaurantimg' style={{objectFit: "cover", height: '100px' , width: '120px'}}/>
+                          
+                    </div>)
+                }}
+                dotsClass='slick-dots custom-indicator'
+                >
+                    {
+                        Images.map((item,index) => 
+                          <div key={index}>
+                              <img src={item} style={{width: "100%" , height: '50vh'}}/>
+                          </div>
+                        )
+                    }
+                </Slider>
+              </div>
+            </div> */}

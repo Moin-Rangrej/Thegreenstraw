@@ -6,6 +6,7 @@
     background-image: url('../../assets/images/HomeBG.png');
     /* height: 100vh;
     width: 100%; */
+    min-height: auto;
     height: 100vh;
     width: auto;
     background-repeat: no-repeat;
@@ -32,7 +33,7 @@
 
 .Home_pera {
     font-weight: 600;
-    font-size: 2vw;
+    font-size: 2rem;
     line-height: 36px;
     letter-spacing: 0.01em;
     color: #FFFFFF;
@@ -58,7 +59,7 @@
     }
 
     .Home_heading {
-        font-size: 1.5rem;
+        font-size: 2rem;
         line-height: 35px;
         margin-bottom: 10px;
     }
@@ -321,15 +322,23 @@
 
 }
 
+
 @media only screen and (min-width: 280px) and (max-width: 576px) {
 
     .Restaurant{
         height: 350px;
     }
+
+    .btn_ac3{
+        margin-left: -10px;
+        width: 100%;
+    }
     
     .accordion3{
-        margin-right: 20px;
+        white-space: normal;
     }
+
+    
 
     .WhatwedoHeading {
         font-weight: 700;
@@ -347,6 +356,13 @@
     }
 }
 
+@media screen and (max-width: 280px) {
+    .btn{
+        white-space: normal;
+    }
+}
+
+
 
 /* section5 start here */
 
@@ -355,14 +371,14 @@
     /* max-height: auto; */
     /* max-width: auto; */
     width: 100%;
-    min-height: 50vh;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 
 .workareaHeading {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 2.12rem;
     line-height: 51px;
     letter-spacing: 0.01em;
@@ -372,7 +388,7 @@
 }
 
 .authorname {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.5rem;
     line-height: 36px;
     letter-spacing: 0.01em;
@@ -381,16 +397,32 @@
     padding: 0px 40px;
 }
 
+
+
 @media only screen and (max-width: 1550px) {
+    .abc {
+        max-height: max-content;
+        height: 40vh;
+    }
     .workareaHeading {
         font-size: 2rem;
         padding: 50px 50px;
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    .abc {
+        max-height: max-content;
+        height: 40vh;
+    }
+    .workareaHeading {
+        font-size: 1.5rem;
+        padding: 20px 50px;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .abc {
-        background-image: url('../../assets/images/Services/place.png');
         /* max-height: auto; */
         /* max-width: auto; */
         width: 100%;
@@ -422,7 +454,7 @@
 @media only screen and (max-width: 768px) {
     .abc {
         background-size: auto;
-        height: 15vh;
+        min-height: max-content;
     }
 
     .workareaHeading {
@@ -441,24 +473,18 @@
 
 }
 
-@media screen and (max-width: 767px){
-    .abc {
-        background-size: auto;
-        height: 25vh;
-    }
-    
-}
+
 
 @media only screen and (min-width: 280px)  and (max-width: 576px) {
     .abc {
         background-size: auto;
-        height: 35vh;
+        min-height: 100%;
     }
 
     .workareaHeading {
-        font-size: 13px;
+        font-size: 1rem;
         line-height: 25px;
-        padding: 20px 50px;
+        padding: 10px 30px;
     }
 
     .authorname {
@@ -708,6 +734,7 @@
     color: #91C13A;
     opacity: 1;
 }
+
 
 .inputmail:focus {
     outline: none;

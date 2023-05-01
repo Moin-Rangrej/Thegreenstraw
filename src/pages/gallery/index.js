@@ -21,7 +21,6 @@ export default function Gallery() {
           <div className='galleryimagesSec'>
               <div className='container my-5'>
                 <div className='gallerypages d-flex justify-content-around flex-wrap'>
-                  
                   <NavLink to='all' className='imgpages'>ALL</NavLink>
                   <NavLink to='cafes' className='imgpages'>Cafe's</NavLink>
                   <NavLink to='cowork' className='imgpages'>Co-Working Space</NavLink>

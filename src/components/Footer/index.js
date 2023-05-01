@@ -58,7 +58,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className='col-lg-5 my-3'>
+                <div className='col-lg-5 my-3 gtr_gallery'>
                     <h1 className='text-white getintouch pb-2'>GALLERY</h1>
                     <div className='galleryFirst d-flex flex-wrap'>
                         <img src={G1} alt='Gallery1' className='Gallery1' />

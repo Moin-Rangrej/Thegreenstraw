@@ -119,7 +119,7 @@
 .aboutusSecThreePera {
     width: 47%;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.5rem;
     line-height: 30px;
     text-align: center;
@@ -134,7 +134,7 @@
     }
 
     .aboutusSecThreePera {
-        width: 77%;
+        width: 100%;
         text-align: center;
         font-weight: 600;
         font-size: 1.2rem;
@@ -154,7 +154,7 @@
         font-size: 2rem;
     }
     .aboutusSecThreePera {
-        width: 87%;
+        width: 100%;
         font-weight: 600;
         font-size: 1rem;
         line-height: 25px;

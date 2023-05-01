@@ -26,7 +26,7 @@ export default function Header() {
                                     <Link className="nav-link navbartitle" to='/'>Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link navbartitle" to='aboutus'>About us</Link>
+                                    <Link className="nav-link navbartitle" to='/aboutus'>About us</Link>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <Link className="nav-link dropdown-toggle navbartitle" to='/services' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

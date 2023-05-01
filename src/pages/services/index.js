@@ -55,11 +55,11 @@ export default function Services() {
 
           {/* section3 start here */}
 
-          <div className='sectionthree'>
+          <div className='sectionthree py-5'>
             <div className='container'>
               <div className='row sec3row_1'>
                 <div className='col-lg-6'>
-                  <p className='p-xl-4 my-3 servicepara mx-1'>
+                  <p className='p-xl-4 my-md-3 servicepara mx-1'>
                     We are a conscious low waste space where we try to our best to make sure we consume everything in the most sustainable way with the aim to make sure everything goes back to Mother Earth to give back more than we took...
                     <p>We recycle, up cycle, compost, reduce everything here and in our lives. Everything you see around you has been thoughtfully curated to create a first of its kind green space in the city!</p>
                   </p>
@@ -74,7 +74,7 @@ export default function Services() {
                   <img src={chair} alt='Men' className='menimg m-3' />
                 </div>
                 <div className='col-lg-6 mypara'>
-                  <p className='p-xl-3 my-1 servicepara'>
+                  <p className='p-xl-3 my-md-1 servicepara'>
                     We wouldn't want to bind the place with a definition because the place may have a different meaning to each one of you
                     that has been coming here or will be coming here for reasons one different than the other.
                     You may see it as a co-working space, a café, an eco-friendly store, or, like us a space to expand and build

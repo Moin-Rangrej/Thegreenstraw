@@ -25,7 +25,7 @@
 }
 
 .servicePera {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.25rem;
     line-height: 30px;
     text-align: center;
@@ -44,7 +44,7 @@
         font-size: 7.5vw;
     }
     .servicePera {
-        font-weight: 500;
+        font-weight: 600 !important;
         font-size: 4vw;
         line-height: 30px;
         text-align: center;
@@ -330,7 +330,6 @@
     background: url('../../assets/images/servicePage/section3BG.png');
     max-height: max-content;
     width: auto;
-    padding: 50px;
 }
 
 .servicepara {
@@ -342,7 +341,7 @@
 }
 
 .menimg {
-    height: 60vh;
+    max-height: 60vh;
     width: auto;
 }
 
@@ -365,9 +364,9 @@
 
 @media only screen and (max-width: 991px){
     .menimg {
-        height: 70vh;
+        height: 95%;
         width: auto;
-        margin-left: 20px;
+        margin-left: 0px;
     }
     .mypara .servicepara {
         margin-left: 10px;
@@ -397,6 +396,10 @@
 }
 
 @media screen and (max-width:576px) {
+    .menimg {
+        height: 40vh;
+        width: auto;
+    }
     .servicepara {
         font-weight: 600;
         font-size: 1rem;
@@ -404,9 +407,20 @@
         letter-spacing: 0.05em;
         color: #292929;
     }
+}
+
+@media screen and (max-width:340px) {
+    .menimg {
+        height: 35vh;
+        width: auto;
+    }
+}
+
+@media screen and (max-width:300px) {
     .menimg {
         height: 30vh;
         width: auto;
+        margin: 0 !important;
     }
 }
 

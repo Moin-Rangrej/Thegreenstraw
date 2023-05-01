@@ -8,18 +8,19 @@ import Restaurant from '../../assets/images/Services/Restaurant.png'
 import Client from '../../assets/images/client.png'
 import Leftcout from '../../assets/images/Services/leftd_cout.png'
 import Rigthcout from '../../assets/images/Services/rigthd_cout.png'
+import place from '../../assets/images/Services/place.png'
 
 
 
 export default function Home() {
-    const [arrow,setarrow] = useState(false)
-    const [arrow1,setarrow1] = useState(false)
-    const [arrow2,setarrow2] = useState(false)
-    const [arrow3,setarrow3] = useState(false)
+    const [arrow, setarrow] = useState(false)
+    const [arrow1, setarrow1] = useState(false)
+    const [arrow2, setarrow2] = useState(false)
+    const [arrow3, setarrow3] = useState(false)
 
 
     const updateArrow = () => {
-        setarrow(arrow =>  !arrow)
+        setarrow(arrow => !arrow)
     }
 
     const updateArrow1 = () => {
@@ -30,7 +31,7 @@ export default function Home() {
         setarrow2(arrow2 => !arrow2)
     }
 
-    
+
     const updateArrow3 = () => {
         setarrow3(arrow3 => !arrow3)
     }
@@ -84,7 +85,7 @@ export default function Home() {
                         </h1>
                         <p className='servicesPera'>
                             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                                    Velit officia consequat duis enim velit mollit.
+                            Velit officia consequat duis enim velit mollit.
                         </p>
                     </div>
                     <div className='serviceType d-flex justify-content-center flex-wrap'>
@@ -150,7 +151,7 @@ export default function Home() {
                                     <div className="card-header" id="headingOne">
                                         <h5 className="mb-0">
                                             <button className="btn btn-link " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                <i className={arrow ? "fa fa-chevron-circle-right pr-3 accordianArrow" : "fa fa-chevron-circle-down pr-3 accordianArrow" } onClick={updateArrow} aria-hidden="true" />
+                                                <i className={arrow ? "fa fa-chevron-circle-right pr-3 accordianArrow" : "fa fa-chevron-circle-down pr-3 accordianArrow"} onClick={updateArrow} aria-hidden="true" />
                                                 <span>Events and Workshops</span>
                                             </button>
                                         </h5>
@@ -165,7 +166,7 @@ export default function Home() {
                                     <div className="card-header" id="headingTwo">
                                         <h5 className="mb-0">
                                             <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                <i className={arrow1 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow" } onClick={updateArrow1} aria-hidden="true" />
+                                                <i className={arrow1 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow"} onClick={updateArrow1} aria-hidden="true" />
                                                 {/* <i className= "fa fa-chevron-circle-right pr-3 accordianArrow" aria-hidden="true" /> */}
                                                 <span>Sustainability Models</span>
                                             </button>
@@ -181,8 +182,10 @@ export default function Home() {
                                     <div className="card-header" id="headingThree">
                                         <h5 className="mb-0">
                                             <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            <i className={arrow2 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow" } onClick={updateArrow2} aria-hidden="true" />
-                                                <span className='accordion3'>Low waste product curation and consulting</span>
+                                                <div className='btn_ac3'>
+                                                    <i className={arrow2 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow"} onClick={updateArrow2} aria-hidden="true" />
+                                                    <span className='accordion3'>Low waste product curation and consulting</span>
+                                                </div>
                                             </button>
                                         </h5>
                                     </div>
@@ -199,7 +202,7 @@ export default function Home() {
                                     <div className="card-header" id="headingThree">
                                         <h5 className="mb-0">
                                             <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                <i className={arrow3 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow" } onClick={updateArrow3} aria-hidden="true" />
+                                                <i className={arrow3 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow"} onClick={updateArrow3} aria-hidden="true" />
                                                 <span>Awareness Campaigns</span>
                                             </button>
                                         </h5>
@@ -225,6 +228,14 @@ export default function Home() {
                         ~ Mae Jemison
                     </p>
                 </section>
+
+                {/* <div className="abc card bg-dark text-white">
+                    <img src={place} className="card-img" alt="palce image" />
+                    <div className="card-img-overlay">
+                        <p className="card-text">It’s your place in the world; it’s your life. Go on and do all you can with it, and make it the life you want to live.</p>
+                        <p className="card-text">~ Maya Angelou</p>
+                    </div>
+                </div> */}
 
                 {/* Section5 end here */}
 
@@ -253,11 +264,11 @@ export default function Home() {
                     <div className='container d-flex  flex-wrap'>
                         <div className='stayconnect pt-5'>
                             STAY <p className='connect'>CONNECTED</p>
-                        <p className='subscribePera'>Subscribe to our newsletter</p>
+                            <p className='subscribePera'>Subscribe to our newsletter</p>
                         </div>
 
                         <div className='inputbox d-flex justify-content-center align-items-center '>
-                            <input type='text' placeholder='Enter your E-mail Address' className='inputmail py-2'/>
+                            <input type='email' placeholder='Enter your E-mail Address' className='inputmail py-2' />
                             <button className='subscribebtn'>Subscribe</button>
                         </div>
                     </div>
