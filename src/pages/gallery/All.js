@@ -25,7 +25,6 @@ export default function  All() {
         transition:{
           type:'spring',
           stiffness: 100,
-          duration: 0.5
         }
       }
     }
@@ -41,7 +40,6 @@ export default function  All() {
         transition:{
           type:'spring',
           stiffness: 100,
-          duration: 0.5
         }
       }
     }
@@ -57,7 +55,6 @@ export default function  All() {
         transition:{
           type:'spring',
           stiffness: 100,
-          duration: 0.5
         }
       }
     }
