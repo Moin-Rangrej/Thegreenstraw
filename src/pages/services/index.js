@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import office1 from '../../assets/images/servicePage/office1.png'
 import office2 from '../../assets/images/servicePage/office2.png'
+import Officesec from './Officesec'
 
 
 
@@ -25,7 +26,7 @@ export default function Services() {
           </div>
           {/* section2 start here */}
 
-          <div className='servicetwo'>
+          {/* <div className='servicetwo'>
             <p className='offering py-4'>What We’re Offering to Our Clients</p>
             <h2 className='text-center serviceHeading py-4'>The Greenstraw Spaces</h2>
             <div className='viewoffices'>
@@ -55,8 +56,8 @@ export default function Services() {
                 </div>
               </div>
             </div>
-          </div>
-
+            </div> */}
+            <Officesec />
           {/* section3 start here */}
 
           <div className='sectionthree py-5'>
@@ -69,7 +70,7 @@ export default function Services() {
                   </p>
                 </div>
                 <div className='col-lg-6'>
-                  <img src={Men} alt='Men' className='menimg m-3' />
+                  <img src={Men} alt='Men' className='menimg m-3 img-thumbnail' />
                 </div>
               </div>
               {/*  second pic start here */}

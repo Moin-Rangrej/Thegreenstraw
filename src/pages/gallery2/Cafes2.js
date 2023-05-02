@@ -62,7 +62,7 @@ export default function Cafes2() {
   const animatebottonimg = {
     hidden:{
       opacity:0,
-      y: '-100vw'
+      y: '100vw'
     },
     visible:{
       opacity:1,

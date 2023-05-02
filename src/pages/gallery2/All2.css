@@ -76,3 +76,11 @@
     background-size: cover;
     margin-bottom: 1rem;
 }
+
+.glImg{
+    transition: all 1.1s;
+}
+
+.glImg:hover{
+    transform: scale(1.2);
+}

@@ -22,6 +22,7 @@ import Store2 from './pages/gallery2/Store2';
 import { AnimatePresence } from 'framer-motion';
 import Overlay from './pages/Home/Overlay';
 import Overlay2 from './pages/Aboutus/Overlay2';
+import Officesec from './pages/services/Officesec';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path='/aboutus' element={<Aboutus />} />
         <Route path='/services' element={<Services />} />
         <Route path='/overlay' element={<Overlay2 />}/>
+        <Route path='/officesec' element={<Officesec />}/>
         <Route path='/gallery' element={<Gallery2 />}>
           <Route index element={<All2/>}/>
           <Route path='all2' element={<All2 />} />

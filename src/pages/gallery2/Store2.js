@@ -17,11 +17,11 @@ export default function Store2() {
   const animatefirstimg = {
     hidden:{
       opacity:0,
-      y: '-100vw'
+      x: '-100vw'
     },
     visible:{
       opacity:1,
-      y:0,
+      x:0,
       transition:{
         type:'spring',
         stiffness: 50,
@@ -33,11 +33,11 @@ export default function Store2() {
   const animatelastimg = {
     hidden:{
       opacity:0,
-      y: '100vw'
+      x: '100vw'
     },
     visible:{
       opacity:1,
-      y:0,
+      x:0,
       transition:{
         type:'spring',
         stiffness: 50,

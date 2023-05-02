@@ -105,6 +105,7 @@ export default function All2() {
       >
         <a href={Img1} data-lightbox="models" data-title="Caption1">
           <motion.img src={Img1} alt='Img1' 
+            className='glImg'
             variants={animatefirstimg}
             initial="hidden"
             animate="visible"
@@ -113,6 +114,7 @@ export default function All2() {
         </a>
         <a href={Img3} data-lightbox="models" data-title="Caption3">
           <motion.img src={Img3} alt='Img3'
+            className='glImg'
             variants={animatemenimg}
             initial="hidden"
             animate="visible"
@@ -120,6 +122,7 @@ export default function All2() {
         </a>
         <a href={Img2} data-lightbox="models" data-title="Caption2">
           <motion.img src={Img2} alt='Img2'
+            className='glImg'
              variants={animatezoomimg}
              initial="hidden"
              animate="visible"
@@ -128,13 +131,15 @@ export default function All2() {
         
         <a href={Img7} data-lightbox="models" data-title="Caption7">
           <motion.img src={Img7} alt='Img7'
+            className='glImg'
              variants={animaterightimg}
              initial="hidden"
              animate="visible"
           />
         </a>
         <a href={Img4} data-lightbox="models" data-title="Caption4">
-          <motion.img src={Img4} alt='Img4' 
+          <motion.img src={Img4} alt='Img4'
+            className='glImg'
             variants={animatefirstimg}
             initial="hidden"
             animate="visible"
@@ -142,6 +147,7 @@ export default function All2() {
         </a>
         <a href={Img5} data-lightbox="models" data-title="Caption5">
           <motion.img src={Img5} alt='Img5'
+            className='glImg'
             variants={animatezoomimg}
             initial="hidden"
             animate="visible"
@@ -149,6 +155,7 @@ export default function All2() {
         </a>
         <a href={Img6} data-lightbox="models" data-title="Caption6">
           <motion.img src={Img6} alt='Img6'
+            className='glImg'
             variants={animatezoomimg}
             initial="hidden"
             animate="visible"
@@ -156,6 +163,7 @@ export default function All2() {
         </a>
         <a href={Img8} data-lightbox="models" data-title="Caption8">
           <motion.img src={Img8} alt='Img8'
+            className='glImg'
             variants={animaterightimg}
             initial="hidden"
             animate="visible"
@@ -163,6 +171,7 @@ export default function All2() {
         </a>
         <a href={Img9} data-lightbox="models" data-title="Caption9">
           <motion.img src={Img9} alt='Img9'
+            className='glImg'
             variants={animatelastimg}
             initial="hidden"
             animate="visible"
@@ -170,6 +179,7 @@ export default function All2() {
         </a>
         <a href={Img10} data-lightbox="models" data-title="Caption10">
           <motion.img src={Img10} alt='Img10'
+            className='glImg'
             variants={animatelastimg}
             initial="hidden"
             animate="visible"
