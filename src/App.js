@@ -19,16 +19,21 @@ import All2 from './pages/gallery2/All2';
 import Cafes2 from './pages/gallery2/Cafes2';
 import Cowork2 from './pages/gallery2/Cowork2';
 import Store2 from './pages/gallery2/Store2';
+import { AnimatePresence } from 'framer-motion';
+import Overlay from './pages/Home/Overlay';
+import Overlay2 from './pages/Aboutus/Overlay2';
 
 
 function App() {
   return (
     <div className="App">
+     
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/aboutus' element={<Aboutus />} />
         <Route path='/services' element={<Services />} />
+        <Route path='/overlay' element={<Overlay2 />}/>
         <Route path='/gallery' element={<Gallery2 />}>
           <Route index element={<All2/>}/>
           <Route path='all2' element={<All2 />} />
@@ -36,6 +41,7 @@ function App() {
           <Route path='cowork2' element={<Cowork2 />} />
           <Route path='store2' element={<Store2 />} />
         </Route>
+        
         {/* <Route path='/gallery' element={<Gallery />}>
           <Route index element={<All/>}/>
           <Route path='all' element={<All />} />
@@ -45,6 +51,7 @@ function App() {
         </Route> */}
         <Route path='/contactus/' element={<Contactus />} />
       </Routes>
+    
     </div>
   );
 }

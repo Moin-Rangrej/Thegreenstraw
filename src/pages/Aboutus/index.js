@@ -12,6 +12,7 @@ import linkdin from '../../assets/images/Aboutus/in.png'
 import instagram from '../../assets/images/Aboutus/insta.png'
 import Slider from 'react-slick'
 import { Images } from './Restaurantimg'
+import Overlay2 from './Overlay2'
 
 
 
@@ -163,7 +164,7 @@ export default function Aboutus() {
                 </div>
               </div>
             </div>
-            <div className='col-lg-7 py-5 pl-5 aboutresImages'>
+            <div className='col-lg-7 py-5  aboutresImages'>
               <div>
                 <img src={sliderdata} className='slideImges img-responsive img-thumbnail'/>
               </div >
@@ -182,12 +183,7 @@ export default function Aboutus() {
 
         {/* section5 start here */}
 
-        <section className='abc'>
-          <h4 className='workareaHeading'>Do the best you can until you know better. Then when you know better, do better.</h4>
-          <p className='authorname'>
-            ~ Maya Angelou
-          </p>
-        </section>
+        <Overlay2 />
 
         {/* section6 start here */}
 

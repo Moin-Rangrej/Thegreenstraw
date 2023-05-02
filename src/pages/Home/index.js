@@ -9,6 +9,7 @@ import Client from '../../assets/images/client.png'
 import Leftcout from '../../assets/images/Services/leftd_cout.png'
 import Rigthcout from '../../assets/images/Services/rigthd_cout.png'
 import place from '../../assets/images/Services/place.png'
+import Overlay from './Overlay'
 
 
 
@@ -222,20 +223,7 @@ export default function Home() {
 
                 {/* Section5 start here */}
 
-                <section className='abc'>
-                    <h4 className='workareaHeading'>It’s your place in the world; it’s your life. Go on and do all you can with it, and make it the life you want to live.</h4>
-                    <p className='authorname'>
-                        ~ Mae Jemison
-                    </p>
-                </section>
-
-                {/* <div className="abc card bg-dark text-white">
-                    <img src={place} className="card-img" alt="palce image" />
-                    <div className="card-img-overlay">
-                        <p className="card-text">It’s your place in the world; it’s your life. Go on and do all you can with it, and make it the life you want to live.</p>
-                        <p className="card-text">~ Maya Angelou</p>
-                    </div>
-                </div> */}
+                <Overlay/>
 
                 {/* Section5 end here */}
 
