@@ -5,6 +5,9 @@ import Men from '../../assets/images/servicePage/men.png'
 import chair from '../../assets/images/servicePage/chair.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import office1 from '../../assets/images/servicePage/office1.png'
+import office2 from '../../assets/images/servicePage/office2.png'
+
 
 
 
@@ -29,11 +32,12 @@ export default function Services() {
               <div className='row mx-5'>
                 <div className='office1 col-lg-6'>
                   <div className='officedata'>
+                    
                     <div className='officeinformation row'>
                       <p className='col-9 pt-3 info1'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. </p>
                       <div className='col-3'>
                         <p className='infopage'>
-                          <FontAwesomeIcon icon={faArrowRight} style={{ color: "#90be3c" }} />
+                          <FontAwesomeIcon icon={faArrowRight} style={{ color: "#90be3c" }} className='righticon'/>
                         </p>
                       </div>
                     </div>
@@ -44,7 +48,7 @@ export default function Services() {
                     <div className='officeinformation row'>
                       <p className='col-9 pt-3 info1'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. </p>
                       <div className='col-3'>
-                        <p className='infopage'><FontAwesomeIcon icon={faArrowRight} style={{ color: "#90be3c" }} /></p>
+                        <p className='infopage'><FontAwesomeIcon icon={faArrowRight} style={{ color: "#90be3c" }} className='righticon'/></p>
                       </div>
                     </div>
                   </div>

@@ -68,12 +68,14 @@
     background: url('../../assets/images/servicePage/office1.png');
     height: 70vh;
     background-repeat: no-repeat;
+    width: 100%;
 }
 
 .office2 {
     background: url('../../assets/images/servicePage/office2.png');
     height: 50vh;
     background-repeat: no-repeat;
+    width: 100%;
 }
 
 .officedata {
@@ -312,14 +314,60 @@
         border: 1px solid black;
         background: #FFFFFF;
         position: relative;
-        top: 50px;
-        right: 30px;
+        top: 20px;
+        right: 10px;
     }
     .officedata {
         background: linear-gradient(152.67deg, #91C13A -1.1%, rgba(145, 193, 58, 0) 69.27%);
         width: 80px;
         height: 150px;
         margin-left: -15px;
+    }
+    .servicetwo{
+        padding-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .office1 {
+        height:auto;
+        background-size: contain;
+        padding: 50px;
+        margin: 0% 5%;
+    }
+    
+    .office2 {
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 30px;
+        margin: 0% 0%;
+    }
+    .officeinformation {
+        width: 200px;
+        height: 60px;
+        position: relative;
+        top: 100px;
+        left: 15px;
+        background: #91C13A;  
+    }
+    .infopage {
+        height: 25px;
+        width: 35px;
+        border: 1px solid black;
+        background: #FFFFFF;
+        position: relative;
+        top: 20px;
+        right: 10px;
+    }
+    .info1 {
+        font-size: 9px;
+        line-height: 11px;
+    }
+    .righticon{
+        position: relative;
+        top: -5px;
+        left: -5px;
     }
 }
 
