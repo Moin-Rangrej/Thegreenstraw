@@ -16,7 +16,7 @@ p{
 .navbartitle {
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     color: white !important;
     margin-right: 50px;
@@ -49,9 +49,13 @@ p{
     color: #91C13A;
 }
 
-.dropdown:hover .dropdown-menu{
-    display: block;
+@media screen and (min-width: 768px) {
+    .dropdown:hover .dropdown-menu{
+        display: block;
+    }
 }
+
+
 
 .dropdown-menu{
     background-color: #343a40;
@@ -71,7 +75,7 @@ p{
         margin-left: 0px;
         font-weight: 600;
     }
-    
+   
 }
 
 @media only screen and (min-width: 120px) and (max-width: 360px){
@@ -89,6 +93,19 @@ p{
     }
     
 }
+
+@media screen and (max-width: 576px) {
+    .dropdown:target .dropdown-menu{
+        display: block;
+    }
+    
+}
+
+@media (min-width: 768px) {
+	#nav .navbar li:hover ul.dropdown-menu {visibility: visible;display:block!important}
+	#nav .navbar li span {display:none}
+}
+
 
 /* .navbar-toggler{
     border:0;
@@ -208,5 +225,16 @@ p{
 
 /* Color of Toggler when collapsed */
 .navbar-toggler.collapsed .toggler-icon {
-    background-color: #777777;
+    background-color: #91C13A;
 }
+
+ .nav-item a.active{
+    color: #91C13A !important;
+    text-decoration: none;
+ }
+
+ @media screen and (min-width: 576px) {
+    .dropdown:hover > .dropdown-menu{
+        display: inline-block;
+    }
+ }

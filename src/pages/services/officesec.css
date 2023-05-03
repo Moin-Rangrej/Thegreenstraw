@@ -85,7 +85,7 @@ button:focus {
 }
 
 .righticon{
-    font-size: 20px;
+    font-size: 25px;
 }
 
 @media screen and (max-width: 1445px) {
@@ -192,7 +192,7 @@ button:focus {
     }
 
     .officeinfo1{
-        min-height: auto;
+        min-height: 100px;
         min-width: 99%;
         background-color: #91C13A;
         position: relative;
@@ -202,19 +202,24 @@ button:focus {
 
     .infotext {
         font-weight: 700;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 24px;
         letter-spacing: 0.05em;
         color: #FFFFFF;
         padding-top: 10px;
     }
 
+    .righticon{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    
     
 .officepage{
     height: 50px;
     margin-top: 25px;
-    width: 120px;
-    border-radius: 50%;
+    width: 85px;
+    border-radius: 60%;
     display: flex;
     justify-content: center;
     align-items: center;

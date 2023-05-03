@@ -21,10 +21,10 @@ export default function Gallery2() {
           <div className='galleryimagesSec'>
               <div className='container my-5'>
                 <div className='gallerypages d-flex justify-content-around flex-wrap'>
-                  <NavLink to='all2' className='imgpages'>ALL</NavLink>
-                  <NavLink to='cafes2' className='imgpages'>Cafe's</NavLink>
-                  <NavLink to='cowork2' className='imgpages'>Co-Working Space</NavLink>
-                  <NavLink to='store2' className='imgpages'>Store's</NavLink>
+                  <NavLink to='all2' className='imgpages mr-3' id='all'>ALL</NavLink>
+                  <NavLink to='cafes2' className='imgpages mr-3' id='cafes'>Cafe's</NavLink>
+                  <NavLink to='cowork2' className='imgpages mr-3' id='coworking'>Co-Working Space</NavLink>
+                  <NavLink to='store2' className='imgpages' id='store'>Store's</NavLink>
                 </div>
                   <Outlet />
                   

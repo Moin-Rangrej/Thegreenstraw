@@ -137,7 +137,7 @@ export default function Aboutus() {
                       <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         <i className={arrow2 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow"} onClick={updateArrow2} aria-hidden="true" />
                         {/* <i className= "fa fa-chevron-circle-right pr-3 accordianArrow" aria-hidden="true" /> */}
-                        Low waste product curation and consulting
+                        <span className='accordion3'>Low waste product curation and consulting</span>
                       </button>
                     </h5>
                   </div>
