@@ -182,6 +182,8 @@ p {
     line-height: 30px;
     letter-spacing: 0.01em;
     color: #000000;
+    margin-left: 40px;
+    margin-bottom: 30px;
 }
 
 ::placeholder {
@@ -209,6 +211,7 @@ p {
     line-height: 30px;
     letter-spacing: 0.01em;
     color: #000000;
+    margin-top: -60px;
 }
 
 .message:focus {
@@ -217,6 +220,32 @@ p {
 
 textarea{
     margin: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .userinput {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .message{
+        margin-left: 40px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .message{
+        width: 650px;
+        margin-top: 0px;
+        margin-left: 40px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1023px)  {
+    .message{
+        width: 650px;
+        margin-top: 0px;
+        margin-left: 40px;
+    }
 }
 
 @media screen and (max-width: 991px){
@@ -228,8 +257,15 @@ textarea{
     }
     .message{
         width: 500px;
+        margin-top: 0px;
+        margin-left: 40px;
+    }
+    .userinput {
+        justify-content: center;
+        margin-bottom: 30px;
     }
 }
+
 
 @media screen and (max-width: 576px) {
     .firstname {
@@ -237,7 +273,8 @@ textarea{
         margin: 0px 10px;
     }
     .message{
-        width: 400px;
+        width: 350px;
+        margin-left: -5px;
     }
 }
 
@@ -245,5 +282,16 @@ textarea{
     .firstname {
         width: 350px;
         margin: auto;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .firstname {
+        width: 250px;
+        margin: 0px 10px;
+    }
+    .message{
+        width: 350px;
+        margin-left: 0px;
     }
 }

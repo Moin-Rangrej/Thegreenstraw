@@ -358,7 +358,7 @@
 }
 
 .servicepara {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.5rem;
     line-height: 30px;
     letter-spacing: 0.05em;
@@ -372,11 +372,12 @@
 
 .img-thumbnail{
     border: none;
+    background: transparent;
 }
 
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
     .mypara .servicepara {
-        margin-left: 40px;
+        margin-left: 0px;
     }
     .servicepara {
         font-weight: 600;
@@ -386,19 +387,17 @@
         color: #292929;
     }
     .menimg {
-        height: 50vh;
         width: auto;
     }
 }
 
 @media only screen and (max-width: 991px){
     .menimg {
-        height: 95%;
         width: auto;
         margin-left: 0px;
     }
     .mypara .servicepara {
-        margin-left: 10px;
+        margin-left: 0px;
     }
     .servicepara {
         font-weight: 600;
@@ -417,18 +416,10 @@
 }
 
 
-@media screen and (max-width: 665px) {
-    .menimg {
-        height: 60vh;
-        width: auto;
-    }
-}
+
 
 @media screen and (max-width:576px) {
-    .menimg {
-        height: 32vh;
-        max-width: 100%;
-    }
+   
     .servicepara {
         font-weight: 600;
         font-size: 1rem;
@@ -440,7 +431,6 @@
 
 @media screen and (max-width:340px) {
     .menimg {
-        height: 35vh;
         width: auto;
     }
 }

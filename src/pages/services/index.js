@@ -70,13 +70,13 @@ export default function Services() {
                   </p>
                 </div>
                 <div className='col-lg-6'>
-                  <img src={Men} alt='Men' className='menimg m-3 img-thumbnail' />
+                  <img src={Men} alt='Men' className='menimg img-thumbnail' />
                 </div>
               </div>
               {/*  second pic start here */}
               <div className='row'>
                 <div className='col-lg-6'>
-                  <img src={chair} alt='Men' className='menimg m-3' />
+                  <img src={chair} alt='Men' className='menimg img-thumbnail' />
                 </div>
                 <div className='col-lg-6 mypara'>
                   <p className='p-xl-3 my-md-1 servicepara'>

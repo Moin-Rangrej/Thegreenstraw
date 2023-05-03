@@ -64,7 +64,7 @@
 }
 
 .imgpages {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     font-weight: 600;
     font-size: 18px;
     line-height: 40px;
@@ -74,12 +74,13 @@
 }
 
 .active:hover{
-    color: #292929 !important;
+    color: #91C13A !important;
+    text-decoration: underline;
 }
 
 .active{
     color: #91C13A;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:hover{

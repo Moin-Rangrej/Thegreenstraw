@@ -15,32 +15,30 @@ export default function Officesec() {
                 <p className='serviceHeading'>The Greenstraw Spaces</p>
             </div>
             <div className=''>
-                <div className='officediv  mt-5 row'>
-
-
-                    <div className='col-lg-6 officediv2'>
-                        <img src={office2} className='officeimg img-thumbnail'/>
-                        <div className='officeinfo1 d-flex justify-content-center'>
+                <div className='officediv mt-5 row'>
+                    <div className='col-lg-6  officediv2'>
+                        <img src={office1} className='officeimg img-thumbnail' />
+                        <div className='officeinfo1 d-flex justify-content-center img-thumbnail'>
                             <div className='infotext '>
                                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                             </div>
-                            <button className='sid'>
-                                
-                                    <FontAwesomeIcon icon={faArrowRight} style={{ color: "#90be3c" }} className='righticon' />
-                              
+                            <button className='officepage'>
+
+                                <FontAwesomeIcon icon={faArrowRight} style={{ color: "#90be3c" }} className='righticon' />
+
                             </button>
                         </div>
                     </div>
-                    <div className='col-lg-6 officediv2'>
+                    <div className='col-lg-6  officediv2'>
                         <img src={office2} className='officeimg img-thumbnail' />
-                        <div className='officeinfo1 d-flex justify-content-center'>
+                        <div className='officeinfo1 d-flex justify-content-center img-thumbnail'>
                             <div className='infotext '>
                                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                             </div>
-                            <button className='sid'>
-                                
-                                    <FontAwesomeIcon icon={faArrowRight} style={{ color: "#90be3c" }} className='righticon' />
-                              
+                            <button className='officepage'>
+
+                                <FontAwesomeIcon icon={faArrowRight} style={{ color: "#90be3c" }} className='righticon' />
+
                             </button>
                         </div>
 

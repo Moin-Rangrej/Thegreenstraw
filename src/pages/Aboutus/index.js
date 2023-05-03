@@ -81,11 +81,11 @@ export default function Aboutus() {
           <h1 className='aboutusSecThreehead'>
             Why we started
           </h1>
-          <p className='aboutusSecThreePera py-2'>
+          <p className='aboutusSecThreePera p-3'>
             It came from a realisation that we couldn’t have relevant conversations with people around us about sustainability. Not because they were ignorant but because no one told us or taught us that what we were doing was impacting the World negatively.
           </p>
 
-          <p className='aboutusSecThreePera py-5'>
+          <p className='aboutusSecThreePera p-3 '>
             We needed to do something that connected us with people every day and at least initiate conversations of impact with the hope that it'll start a chain reaction of actions that bring a behavioural change so all of us could collectively contribute to a more earth-friendly living!
           </p>
 
@@ -164,7 +164,7 @@ export default function Aboutus() {
                 </div>
               </div>
             </div>
-            <div className='col-lg-7 py-5  aboutresImages'>
+            <div className='col-lg-7 py-1  aboutresImages'>
               <div>
                 <img src={sliderdata} className='slideImges img-responsive img-thumbnail'/>
               </div >

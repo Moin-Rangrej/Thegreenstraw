@@ -184,7 +184,7 @@
 }
 
 .btn-link {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.25rem;
     line-height: 30px;
     letter-spacing: 0.01em;
@@ -238,6 +238,15 @@
         font-size: 1.7rem;
         line-height: 40px;
     }
+    
+    .btn-link {
+        font-size: 1rem;
+        line-height: 30px;
+    }
+
+    .cardData {
+        font-size: 16px;
+    }
 
 }
 
@@ -290,20 +299,6 @@
     }
 }
 
-
-/* slick Crousel */
-
-/* .slick-arrow.slick-prev,
-.slick-arrow.slick-next{
-    background:#91C13A;
-} */
-
-/* .custom-indicator li{
-    height: 50px;
-    width: 50px;
-    border: 2px solid green;
-    
-} */
 
 .custom-indicator{
     /* border: 2px solid green; */
@@ -377,24 +372,6 @@
 }
 
 
-/* .slick-dots {
-    position: absolute;
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-} */
-
-/* .slick-dots li {
-    padding: 50px !important;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-} */
-
-
 .aboutresImages{
     display: flex;
     flex-direction: column;
@@ -412,7 +389,7 @@
 
 .slideImges{
     height: 400px;
-    width: 550px; 
+    width: 100%; 
 }
 
 .clicked{
