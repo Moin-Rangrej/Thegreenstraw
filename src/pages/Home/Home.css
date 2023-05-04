@@ -699,7 +699,7 @@
 
 .section7 {
     background: url('../../assets/images/stayconnect.png');
-    height: 40vh;
+    min-height: 40vh;
     width: 100%;
     /* max-height: max-content; */
     /* max-width: max-content; */
@@ -774,7 +774,7 @@
 @media only screen and (max-width: 991px) {
 
     .section7 {
-        height: 30vh;
+        min-height: 50vh;
         background-size: auto;
     }
 

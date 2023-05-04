@@ -109,6 +109,8 @@ p {
     margin-bottom: 0;
 }
 
+
+
 @media screen and (max-width: 1200px) {
     .infoBG {
         max-height: auto;
@@ -142,7 +144,7 @@ p {
 
     .available {
         text-align: center;
-
+        font-weight: 600;
     }
 }
 
@@ -166,6 +168,7 @@ p {
 
 .namesfield {
     height: 100%;
+    /* padding: 10px; */
 }
 
 .firstname {
@@ -218,51 +221,104 @@ p {
     outline: none;
 }
 
-textarea{
+textarea {
     margin: 15px;
 }
+
+.sendmessagebtn{
+    margin-left: 0;
+    
+}
+
+.sendmesgdiv{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.sendmessagebtn {
+    min-width: auto;
+    background: #91C13A;
+    border: 1px solid #91C13A;
+    border-radius: 4px;
+    padding: 10px;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 
 @media screen and (max-width: 768px) {
     .userinput {
         justify-content: center;
         margin-bottom: 30px;
     }
-    .message{
+
+    .message {
         margin-left: 40px;
+    }
+
+    .sendmesgdiv{
+        justify-content: center;
     }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
-    .message{
+    .message {
         width: 650px;
         margin-top: 0px;
         margin-left: 40px;
     }
+    .sendmessagebtn{
+        margin-top: 0;
+    }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1023px)  {
-    .message{
+@media screen and (min-width: 992px) and (max-width: 1023px) {
+    .message {
         width: 650px;
         margin-top: 0px;
         margin-left: 40px;
     }
+
+    .sendmessagebtn{
+        margin-top: 0;
+    }
 }
 
-@media screen and (max-width: 991px){
-    textarea{
+@media screen and (max-width: 991px) {
+    textarea {
         margin: 0px;
     }
+
     .firstname {
         width: 500px;
     }
-    .message{
+
+    .message {
         width: 500px;
         margin-top: 0px;
-        margin-left: 40px;
+        margin-left: 30px;
     }
+
     .userinput {
         justify-content: center;
         margin-bottom: 30px;
+    }
+    .sendmesgdiv{
+        justify-content: center;
+    }
+
+    .sendmessagebtn{
+        margin-top: 0;
     }
 }
 
@@ -272,26 +328,46 @@ textarea{
         width: 400px;
         margin: 0px 10px;
     }
-    .message{
-        width: 350px;
-        margin-left: -5px;
-    }
-}
 
-@media screen and (max-width: 430px) {
-    .firstname {
+    .message {
         width: 350px;
+        margin-left: 5px;
+        line-height: 50px;
+    }
+
+    .namesfield {
         margin: auto;
     }
+    .sendmessagebtn{
+        margin-left: 0;
+    }
+    .sendmesgdiv{
+        justify-content: center;
+    }
 }
 
-@media screen and (max-width: 280px) {
+@media screen and (min-width: 360px) and (max-width: 430px) {
+    .firstname {
+        width: 340px;
+        margin: auto;
+    }
+    .sendmesgdiv{
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 350px) {
     .firstname {
         width: 250px;
         margin: 0px 10px;
     }
-    .message{
+
+    .message {
         width: 350px;
         margin-left: 0px;
+        line-height: 50px;
+    }
+    .sendmesgdiv{
+        justify-content: center;
     }
 }

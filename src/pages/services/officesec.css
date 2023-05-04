@@ -8,7 +8,6 @@
 .officediv{
     display: flex;
     margin-left: 30px;
-    width: 100%;
     justify-content: center;
 }
 
@@ -179,12 +178,9 @@ button:focus {
         line-height: 40px;
     }
 
-    .officediv{
-        margin-left: 0px;
-    }
-
     .officeimg{
        padding-left: 0px;
+       margin-left: 0px;
     }
     
     .officeimg{
@@ -212,6 +208,11 @@ button:focus {
     .righticon{
         margin-top: 10px;
         margin-left: 10px;
+    }
+    
+    .officediv{
+        margin-left: 0px;
+        margin-right: 0px;
     }
     
     

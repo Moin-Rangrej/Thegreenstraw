@@ -380,11 +380,11 @@
 }
 
 .smallresImg{
+    min-height: 20px;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    
+    /* flex-wrap: wrap; */
 }
 
 .slideImges{

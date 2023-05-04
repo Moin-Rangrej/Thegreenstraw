@@ -28,22 +28,25 @@ export default function Contactus() {
           </div>
 
           <div className='sectionThree my-lg-5 '>
-              <div className='userinput container'>
-                    <div className='namesfield d-flex flex-wrap justify-content-md-around'>
-                        <input type='text' placeholder='First Name' className='firstname my-2'/> 
-                    <input type='text' placeholder='Last Name' className='firstname my-2'/>
-                    </div>
-                    <div className='namesfield d-flex  flex-wrap justify-content-md-center'>
-                        <input type='email' placeholder='E-Mail' className='firstname my-3'/>
-                        <input type='number' placeholder='Phone' className='firstname my-3'/>
-                    </div>
-                    <textarea id="w3review" name="w3review" placeholder='Message' rows={2} cols={40} className='message'/>
+            <div className='userinput container'>
+              <div className='namesfield d-flex flex-wrap justify-content-md-around'>
+                <input type='text' placeholder='First Name' className='firstname my-2' />
+                <input type='text' placeholder='Last Name' className='firstname my-2' />
               </div>
+              <div className='namesfield d-flex  flex-wrap justify-content-md-center'>
+                <input type='email' placeholder='E-Mail' className='firstname my-3' />
+                <input type='number' placeholder='Phone' className='firstname my-3' />
+              </div>
+              <textarea id="w3review" name="w3review" placeholder='Message' rows={2} cols={40} className='message' />
+            </div>
+            <div className='container sendmesgdiv'>
+              <button className='sendmessagebtn'>SEND MESSAGE</button>
+            </div>
           </div>
 
           <div className='infoBG row'>
             <div className='container d-flex flex-wrap'>
-              <div className='col-lg-4 companyInfo phoneinfo'>
+              <div className='col-lg-4  companyInfo phoneinfo'>
                 <h1 className='ownerInfo'>Phones</h1>
                 <hr className='hrline2' />
                 <p>Office +1 (409) 987–5874</p>
