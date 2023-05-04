@@ -1,8 +1,117 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './contactus.css'
 import Layout from '../../components/Layout'
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+import { useFormik } from 'formik';
+
+const initialValues = {
+  fname: "",
+  lname: "",
+  myemail: "",
+  pnumber: "",
+  mymessage: ""
+
+}
 
 export default function Contactus() {
+
+  const [pending, setPending] = useState(false);
+
+  const [formdata, setFormdata] = useState(initialValues)
+
+  const [formdataerror, setFormdataerror] = useState(initialValues)
+
+  const [isSubmit, setIssubmit] = useState(false)
+
+  // const { values, errors, handleBlur, handleChange, handleSubmit } = useFormik({
+  //   initialValues: initialValues,
+  //   onSubmit: (values) => {
+  //     console.log(values);
+  //   }
+  // })
+
+
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    // e.preventDefault()
+    setPending(true)
+
+    emailjs.sendForm('service_esvxnjn', 'template_a7zz0k8', form.current, 'OkVIJxe-D8Zvw-Fni')
+      .then((result) => {
+        setPending(false)
+        toast.success('Email send successfull', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        form.current.reset()
+        console.log("Email status:", result.text);
+      }, (error) => {
+        setPending(false)
+        toast.error('Error accured go console', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        console.log("Error accured: ", error.text);
+        form.current.reset()
+      });
+  };
+
+  const handleChange = (e) => {
+    // console.log(e.target);
+    const { name, value } = e.target;
+    setFormdata({...formdata, [name]:value})
+    console.log(formdata);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    sendEmail()
+    setFormdataerror(validate(formdata))
+    setIssubmit(true)
+  }
+
+  useEffect(() => {
+      console.log(formdata);
+      if (Object.keys(formdataerror).length === 0 && isSubmit) {
+          console.log(formdata);
+      }
+  } , [formdataerror])
+
+  const validate = (values) => {
+    const errors = {}
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
+    if (!values.fname) {
+        formdataerror.fname = "FirstName is required"
+    }
+    if (!values.lname) {
+      formdataerror.lname = "LastName is required"
+    }
+    if (!values.myemail) {
+      formdataerror.myemail = "Email is required"
+    }
+    if (!values.pnumber) {
+      formdataerror.pnumber = "Phone number is required"
+    }
+    if (!values.mymessage) {
+      formdataerror.mymessage = "Message is required"
+    }
+    return errors;
+  }
 
   return (
     <>
@@ -27,22 +136,68 @@ export default function Contactus() {
             </div>
           </div>
 
-          <div className='sectionThree my-lg-5 '>
-            <div className='userinput container'>
-              <div className='namesfield d-flex flex-wrap justify-content-md-around'>
-                <input type='text' placeholder='First Name' className='firstname my-2' />
-                <input type='text' placeholder='Last Name' className='firstname my-2' />
+          <form ref={form} onSubmit={handleSubmit}>
+            {/* <pre>{JSON.stringify(formdata, undefined, 2)}</pre> */}
+            <div className='sectionThree my-lg-5 '>
+              <div className='userinput container'>
+                <div className='namesfield d-flex flex-wrap justify-content-md-around'>
+                  <input type='text'
+                    name='fname'
+                    placeholder='First Name'
+                    className='firstname my-2'
+                    autoComplete='off'
+                    value={formdata.fname}
+                    onChange={handleChange}
+                    required
+                  />
+                  <input type='text'
+                    name='lname'
+                    placeholder='Last Name'
+                    className='firstname my-2'
+                    autoComplete='off'
+                    value={formdata.lname}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className='namesfield d-flex  flex-wrap justify-content-md-center'>
+                  <input type='email'
+                    name='myemail'
+                    placeholder='E-Mail'
+                    className='firstname my-2'
+                    autoComplete='off'
+                   value={formdata.myemail}
+                    onChange={handleChange}
+                    required
+                  />
+                  <input type='number'
+                    name='pnumber'
+                    placeholder='Phone'
+                    className='firstname pnumber my-2'
+                    autoComplete='off'
+                    value={formdata.pnumber}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <textarea id="w3review"
+                  name="mymessage"
+                  placeholder='Message'
+                  rows={2} cols={40}
+                  className='message'
+                  autoComplete='off'
+                  value={formdata.mymessage}
+                  onChange={handleChange}
+                  required
+                  
+                />
               </div>
-              <div className='namesfield d-flex  flex-wrap justify-content-md-center'>
-                <input type='email' placeholder='E-Mail' className='firstname my-3' />
-                <input type='number' placeholder='Phone' className='firstname my-3' />
+              <div className='container sendmesgdiv'>
+                <button className='sendmessagebtn' disabled={pending ? true : false} >{pending ? "Loading..." : "SEND MESSAGE"}</button>
               </div>
-              <textarea id="w3review" name="w3review" placeholder='Message' rows={2} cols={40} className='message' />
             </div>
-            <div className='container sendmesgdiv'>
-              <button className='sendmessagebtn'>SEND MESSAGE</button>
-            </div>
-          </div>
+          </form>
+
 
           <div className='infoBG row'>
             <div className='container d-flex flex-wrap'>

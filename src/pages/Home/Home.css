@@ -12,7 +12,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin-top: 110px;
 }
 
 .homedata {
@@ -55,6 +54,7 @@
 @media only screen and (max-width: 768px){
     .homedata {
         padding-left: 20px;
+        min-height: auto;
     }
 }
 
@@ -308,6 +308,10 @@
     color: #91C13A;
 }
 
+.myaccordion{
+    color: #000000 !important;
+}
+
 .btn-link:hover {
     color: #000000;
     text-decoration: none;
@@ -326,6 +330,14 @@
         line-height: 50px;
         margin-left: 20px;
     }
+    .myaccordion{
+        padding: 2px;
+    }
+
+    .btn_ac3{
+        margin-left: 20px;
+        width: 100%;
+    }
 
 }
 
@@ -337,7 +349,7 @@
     }
 
     .btn_ac3{
-        margin-left: -10px;
+        margin-left: -30px;
         width: 100%;
     }
     
@@ -348,6 +360,10 @@
     .btn-link {
         font-size: 1rem;
         line-height: 30px;
+    }
+
+    .myaccordion{
+        padding: 2px;
     }
     
     
@@ -742,14 +758,17 @@
     border-bottom: 2px solid #FFFFFF;
 }
 
-::placeholder {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #91C13A;
-    opacity: 1;
-}
+/* input::-webkit-input-placeholder{
+    color:#91C13A;
+} */
 
+#email::-webkit-input-placeholder {
+    color:#91C13A;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    opacity: 1;
+ }
 
 .inputmail:focus {
     outline: none;

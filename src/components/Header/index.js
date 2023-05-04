@@ -4,6 +4,13 @@ import Greenstrawlogo from '../../assets/images/GREENSTRAW-EMBLEM1.png'
 import { Link,NavLink } from 'react-router-dom'
 
 export default function Header() {
+
+    const scrollingcontrol = ()  =>{
+
+        window.scrollTo({ top: 0, behavior: "auto"})
+      }
+      
+
     return (
         <>
             <div>
@@ -23,13 +30,13 @@ export default function Header() {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav ml-auto navbarPages">
                                 <li className="nav-item">
-                                    <NavLink className="nav-link navbartitle"  to='/'>Home</NavLink>
+                                    <NavLink className="nav-link navbartitle"  to='/' onClick={scrollingcontrol}>Home</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link navbartitle" to='/aboutus'>About us</NavLink>
+                                    <NavLink className="nav-link navbartitle" to='/aboutus' onClick={scrollingcontrol} >About us</NavLink>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <NavLink className="nav-link dropdown-toggle navbartitle" to='/services' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <NavLink className="nav-link dropdown-toggle navbartitle" to='/services' onClick={scrollingcontrol} id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Services
                                     </NavLink>
                                     <div className="dropdown-menu " aria-labelledby="navbarDropdown">
@@ -41,12 +48,12 @@ export default function Header() {
                                     </div>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link navbartitle" to='/gallery'>Gallery</NavLink>
+                                    <NavLink className="nav-link navbartitle" to='/gallery' onClick={scrollingcontrol}>Gallery</NavLink>
                                 </li>
                             </ul>
                             <div className="form-inline my-2 my-lg-0">
                             <Link to='/contactus'>
-                                <button className="contactbtn my-2 my-sm-0" type="submit">Contact Us</button>
+                                <button className="contactbtn my-2 my-sm-0" type="submit" onClick={scrollingcontrol}>Contact Us</button>
                             </Link>    
                             </div>
                         </div>

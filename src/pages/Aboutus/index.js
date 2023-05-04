@@ -105,7 +105,7 @@ export default function Aboutus() {
                     <h5 className="mb-0">
                       <button className="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         <i className={arrow ? "fa fa-chevron-circle-right pr-3 accordianArrow" : "fa fa-chevron-circle-down pr-3 accordianArrow"} onClick={updateArrow} aria-hidden="true" />
-                        Events and Workshops
+                        <span className={arrow ? " pr-3 accordianArrow myaccordion" : " pr-3 accordianArrow myaccordion"} onClick={updateArrow}>Events and Workshops</span>
                       </button>
                     </h5>
                   </div>
@@ -121,7 +121,7 @@ export default function Aboutus() {
                       <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         <i className={arrow1 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow"} onClick={updateArrow1} aria-hidden="true" />
                         {/* <i className= "fa fa-chevron-circle-right pr-3 accordianArrow" aria-hidden="true" /> */}
-                        <span>Sustainability Models</span>
+                        <span className={arrow1 ? " pr-3 accordianArrow myaccordion" : " pr-3 accordianArrow myaccordion"} onClick={updateArrow1}>Sustainability Models</span>
                       </button>
                     </h5>
                   </div>
@@ -137,7 +137,7 @@ export default function Aboutus() {
                       <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         <i className={arrow2 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow"} onClick={updateArrow2} aria-hidden="true" />
                         {/* <i className= "fa fa-chevron-circle-right pr-3 accordianArrow" aria-hidden="true" /> */}
-                        <span className='accordion3'>Low waste product curation and consulting</span>
+                        <span className={arrow2 ? "pr-3 accordianArrow accordion3 myaccordion" : "pr-3 accordianArrow accordion3 myaccordion"} onClick={updateArrow2}>Low waste product curation and consulting</span>
                       </button>
                     </h5>
                   </div>
@@ -152,7 +152,7 @@ export default function Aboutus() {
                     <h5 className="mb-0">
                       <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         <i className={arrow3 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow"} onClick={updateArrow3} aria-hidden="true" />
-                        Awareness Campaigns
+                        <span className={arrow3 ? "pr-3 accordianArrow  myaccordion" : "pr-3 accordianArrow myaccordion"} onClick={updateArrow3}>Awareness Campaigns</span>
                       </button>
                     </h5>
                   </div>

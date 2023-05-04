@@ -46,7 +46,7 @@ export default function Footer() {
                         </div>
                         <div className='Addressdiv'>
                             <img src={Mail} alt='mail' className='mymail'/>
-                            <p className='Address'>
+                            <p className='Address phone'>
                                 +97-78686 79799
                             </p>
                         </div>

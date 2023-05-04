@@ -255,6 +255,9 @@ textarea {
     margin-top: 20px;
 }
 
+input[type=number] {
+    -moz-appearance: textfield;
+  }
 
 @media screen and (max-width: 768px) {
     .userinput {
@@ -303,6 +306,10 @@ textarea {
         width: 500px;
     }
 
+    .pnumber{
+        padding-top: 0px;
+    }
+
     .message {
         width: 500px;
         margin-top: 0px;
@@ -331,8 +338,8 @@ textarea {
 
     .message {
         width: 350px;
-        margin-left: 5px;
-        line-height: 50px;
+        margin-left: 0px;
+        line-height: 30px;
     }
 
     .namesfield {

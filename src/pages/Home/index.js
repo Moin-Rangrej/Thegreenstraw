@@ -66,7 +66,7 @@ export default function Home() {
                         <h1 className='greenstarwHeading text-center m-4'>
                             The Greenstraw
                         </h1>
-                        <p className='greenstarwPera text-center'>
+                        <p className='greenstarwPera text-center px-3'>
                             The Greenstraw is an initiative to create a community of conscious and conscientious
                             individuals by curating low waste and interactive solutions to everyday things to
                             bring about a sustainable behavioral change.
@@ -153,7 +153,7 @@ export default function Home() {
                                         <h5 className="mb-0">
                                             <button className="btn btn-link " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                 <i className={arrow ? "fa fa-chevron-circle-right pr-3 accordianArrow" : "fa fa-chevron-circle-down pr-3 accordianArrow"} onClick={updateArrow} aria-hidden="true" />
-                                                <span>Events and Workshops</span>
+                                                <span className={arrow ? " pr-3 accordianArrow myaccordion" : " pr-3 accordianArrow myaccordion"} onClick={updateArrow}>Events and Workshops</span>
                                             </button>
                                         </h5>
                                     </div>
@@ -169,7 +169,7 @@ export default function Home() {
                                             <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                 <i className={arrow1 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow"} onClick={updateArrow1} aria-hidden="true" />
                                                 {/* <i className= "fa fa-chevron-circle-right pr-3 accordianArrow" aria-hidden="true" /> */}
-                                                <span>Sustainability Models</span>
+                                                <span className={arrow1 ? " pr-3 accordianArrow myaccordion" : " pr-3 accordianArrow myaccordion"} onClick={updateArrow1}>Sustainability Models</span>
                                             </button>
                                         </h5>
                                     </div>
@@ -185,7 +185,7 @@ export default function Home() {
                                             <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                                 <div className='btn_ac3'>
                                                     <i className={arrow2 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow"} onClick={updateArrow2} aria-hidden="true" />
-                                                    <span className='accordion3'>Low waste product curation and consulting</span>
+                                                    <span className={arrow2 ? "pr-3 accordianArrow accordion3 myaccordion" : "pr-3 accordianArrow accordion3 myaccordion"} onClick={updateArrow2}>Low waste product curation and consulting</span>
                                                 </div>
                                             </button>
                                         </h5>
@@ -204,7 +204,7 @@ export default function Home() {
                                         <h5 className="mb-0">
                                             <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                                 <i className={arrow3 ? "fa fa-chevron-circle-down pr-3 accordianArrow" : "fa fa-chevron-circle-right pr-3 accordianArrow"} onClick={updateArrow3} aria-hidden="true" />
-                                                <span>Awareness Campaigns</span>
+                                                <span className={arrow3 ? "pr-3 accordianArrow myaccordion" : "pr-3 accordianArrow myaccordion"} onClick={updateArrow3}>Awareness Campaigns</span>
                                             </button>
                                         </h5>
                                     </div>
@@ -256,7 +256,7 @@ export default function Home() {
                         </div>
 
                         <div className='inputbox d-flex justify-content-center align-items-center '>
-                            <input type='email' placeholder='Enter your E-mail Address' className='inputmail py-2' />
+                            <input type='email' placeholder='Enter your E-mail Address' className='inputmail py-2' id='email'/>
                             <button className='subscribebtn'>Subscribe</button>
                         </div>
                     </div>
