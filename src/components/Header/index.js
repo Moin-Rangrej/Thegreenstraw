@@ -5,11 +5,16 @@ import { Link,NavLink } from 'react-router-dom'
 
 export default function Header() {
 
-    const scrollingcontrol = ()  =>{
-
-        window.scrollTo({ top: 0, behavior: "auto"})
+    function scrollingcontrol(){
+        console.log("scroll working")
+        console.log(window);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
       }
-      
+
+
 
     return (
         <>
@@ -36,7 +41,7 @@ export default function Header() {
                                     <NavLink className="nav-link navbartitle" to='/aboutus' onClick={scrollingcontrol} >About us</NavLink>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <NavLink className="nav-link dropdown-toggle navbartitle" to='/services' onClick={scrollingcontrol} id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <NavLink className="nav-link dropdown-toggle navbartitle" to='/services' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Services
                                     </NavLink>
                                     <div className="dropdown-menu " aria-labelledby="navbarDropdown">

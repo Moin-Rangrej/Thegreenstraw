@@ -33,7 +33,7 @@ export default function Contactus() {
 
 
 
-  const form = useRef();
+  const form = useRef();;
 
   const sendEmail = (e) => {
     // e.preventDefault()
@@ -71,18 +71,19 @@ export default function Contactus() {
       });
   };
 
-  const handleChange = (e) => {
-    // console.log(e.target);
-    const { name, value } = e.target;
-    setFormdata({...formdata, [name]:value})
-    console.log(formdata);
-  }
+  // const handleChange = (e) => {
+  //   // console.log(e.target);
+  //   const { name, value } = e.target;
+  //   setFormdata({...formdata, [name]:value})
+  //   console.log(formdata);
+  // }
 
   const handleSubmit = (e) => {
     e.preventDefault()
     sendEmail()
-    setFormdataerror(validate(formdata))
-    setIssubmit(true)
+    // setFormdataerror(validate(formdata))
+    // setIssubmit(true)
+    console.log("Click from handlechange");
   }
 
   useEffect(() => {
@@ -92,30 +93,29 @@ export default function Contactus() {
       }
   } , [formdataerror])
 
-  const validate = (values) => {
-    const errors = {}
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
-    if (!values.fname) {
-        formdataerror.fname = "FirstName is required"
-    }
-    if (!values.lname) {
-      formdataerror.lname = "LastName is required"
-    }
-    if (!values.myemail) {
-      formdataerror.myemail = "Email is required"
-    }
-    if (!values.pnumber) {
-      formdataerror.pnumber = "Phone number is required"
-    }
-    if (!values.mymessage) {
-      formdataerror.mymessage = "Message is required"
-    }
-    return errors;
-  }
+  // const validate = (values) => {
+  //   const errors = {}
+  //   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
+  //   if (!values.fname) {
+  //       formdataerror.fname = "FirstName is required"
+  //   }
+  //   if (!values.lname) {
+  //     formdataerror.lname = "LastName is required"
+  //   }
+  //   if (!values.myemail) {
+  //     formdataerror.myemail = "Email is required"
+  //   }
+  //   if (!values.pnumber) {
+  //     formdataerror.pnumber = "Phone number is required"
+  //   }
+  //   if (!values.mymessage) {
+  //     formdataerror.mymessage = "Message is required"
+  //   }
+  //   return errors;
+  // }
 
   return (
     <>
-      <Layout>
         <section className='contactussec'>
           <div className='contactBG'>
             <h2 className='contactHeading'>Contact Us</h2>
@@ -146,8 +146,6 @@ export default function Contactus() {
                     placeholder='First Name'
                     className='firstname my-2'
                     autoComplete='off'
-                    value={formdata.fname}
-                    onChange={handleChange}
                     required
                   />
                   <input type='text'
@@ -155,8 +153,6 @@ export default function Contactus() {
                     placeholder='Last Name'
                     className='firstname my-2'
                     autoComplete='off'
-                    value={formdata.lname}
-                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -166,8 +162,6 @@ export default function Contactus() {
                     placeholder='E-Mail'
                     className='firstname my-2'
                     autoComplete='off'
-                   value={formdata.myemail}
-                    onChange={handleChange}
                     required
                   />
                   <input type='number'
@@ -175,8 +169,6 @@ export default function Contactus() {
                     placeholder='Phone'
                     className='firstname pnumber my-2'
                     autoComplete='off'
-                    value={formdata.pnumber}
-                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -186,10 +178,7 @@ export default function Contactus() {
                   rows={2} cols={40}
                   className='message'
                   autoComplete='off'
-                  value={formdata.mymessage}
-                  onChange={handleChange}
                   required
-                  
                 />
               </div>
               <div className='container sendmesgdiv'>
@@ -227,7 +216,6 @@ export default function Contactus() {
           </div>
 
         </section>
-      </Layout>
-    </>
+      </>
   )
 }

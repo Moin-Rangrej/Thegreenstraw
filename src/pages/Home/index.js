@@ -39,7 +39,7 @@ export default function Home() {
 
     return (
         <>
-            <Layout>
+            <>
                 {/* Section 1 start */}
                 <section className='homediv'>
                     <div className='homedata'>
@@ -279,7 +279,7 @@ export default function Home() {
 
                 {/* section8 end here */}
 
-            </Layout>
+            </>
         </>
     )
 }

@@ -52,7 +52,6 @@ export default function Aboutus() {
 
   return (
     <>
-      <Layout>
         <section className='aboutusSec'>
           <h1 className='aboutusHeading '>About Us</h1>
           <p className='text-white aboutusPera'>
@@ -240,8 +239,7 @@ export default function Aboutus() {
         </section>
 
 
-      </Layout>
-    </>
+      </>
   )
 }
 

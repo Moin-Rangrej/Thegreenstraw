@@ -5,8 +5,7 @@ import { NavLink, Outlet } from 'react-router-dom'
 
 export default function Gallery2() {
   return (
-    <>
-      <Layout>
+      <>
         <section className='Gallerysec'>
           <div className='gallerybBG'>
             <h2 className='galleryHeading'>Gallery</h2>
@@ -33,7 +32,6 @@ export default function Gallery2() {
           </div>
 
         </section>
-      </Layout>
-    </>
+      </>
   )
 }

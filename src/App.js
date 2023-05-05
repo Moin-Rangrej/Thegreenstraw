@@ -18,10 +18,11 @@ import All2 from './pages/gallery2/All2';
 import Cafes2 from './pages/gallery2/Cafes2';
 import Cowork2 from './pages/gallery2/Cowork2';
 import Store2 from './pages/gallery2/Store2';
-import Overlay from './pages/Home/Overlay';
 import Overlay2 from './pages/Aboutus/Overlay2';
 import Officesec from './pages/services/Officesec';
+import Layout from './components/Layout';
 import Minmax from './Minmax';
+
 
 // external library add
 import "slick-carousel/slick/slick.css";
@@ -30,15 +31,18 @@ import 'lightbox2/dist/css/lightbox.css'
 import 'lightbox2/dist/js/lightbox-plus-jquery'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useEffect } from 'react';
-
+import ScrollToTop from './ScrolltoTop';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   
   return (
     <div className="App">
+      {/* <ScrollToTop /> */}
+      <Header/>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home />}/>
         <Route path='/home' element={<Home />} />
         <Route path='/aboutus' element={<Aboutus />} />
         <Route path='/services' element={<Services />} />
@@ -62,6 +66,7 @@ function App() {
         </Route> */}
         <Route path='/contactus/' element={<Contactus />} />
       </Routes>
+      <Footer />
       <ToastContainer
         position="top-right"
         autoClose={5000}

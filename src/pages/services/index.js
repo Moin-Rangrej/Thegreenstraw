@@ -15,7 +15,6 @@ import Officesec from './Officesec'
 export default function Services() {
   return (
     <>
-      <Layout>
         <section className='Secrvicesection'>
           <div className='services'>
             <h2 className='serviceHeading'>The Greenstraw Spaces</h2>
@@ -108,7 +107,6 @@ export default function Services() {
           </div>
 
         </section>
-      </Layout>
 
     </>
   )
