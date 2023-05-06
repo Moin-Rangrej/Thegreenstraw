@@ -16,6 +16,8 @@
     padding-top: 20px;
 }
 
+
+
 .contactHeading {
     font-weight: 800;
     font-size: 3.5rem;
@@ -267,6 +269,11 @@ input[type=number] {
     -moz-appearance: textfield;
   }
 
+.form-error{
+    color: red;
+    font-weight: 600;
+}  
+
 @media screen and (max-width: 768px) {
     .userinput {
         justify-content: center;
@@ -291,6 +298,7 @@ input[type=number] {
     .sendmessagebtn{
         margin-top: 0;
     }
+   
 }
 
 @media screen and (min-width: 992px) and (max-width: 1023px) {

@@ -1,9 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './contactus.css'
-import Layout from '../../components/Layout'
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
-import { useFormik } from 'formik';
 
 const initialValues = {
   fname: "",
@@ -18,20 +16,7 @@ export default function Contactus() {
 
   const [pending, setPending] = useState(false);
 
-  const [formdata, setFormdata] = useState(initialValues)
-
-  const [formdataerror, setFormdataerror] = useState(initialValues)
-
-  const [isSubmit, setIssubmit] = useState(false)
-
-  // const { values, errors, handleBlur, handleChange, handleSubmit } = useFormik({
-  //   initialValues: initialValues,
-  //   onSubmit: (values) => {
-  //     console.log(values);
-  //   }
-  // })
-
-
+  
 
   const form = useRef();;
 
@@ -71,48 +56,13 @@ export default function Contactus() {
       });
   };
 
-  // const handleChange = (e) => {
-  //   // console.log(e.target);
-  //   const { name, value } = e.target;
-  //   setFormdata({...formdata, [name]:value})
-  //   console.log(formdata);
-  // }
-
-  const handleSubmit = (e) => {
+ 
+  function handleSubmit(e){
     e.preventDefault()
     sendEmail()
-    // setFormdataerror(validate(formdata))
-    // setIssubmit(true)
     console.log("Click from handlechange");
   }
 
-  useEffect(() => {
-      console.log(formdata);
-      if (Object.keys(formdataerror).length === 0 && isSubmit) {
-          console.log(formdata);
-      }
-  } , [formdataerror])
-
-  // const validate = (values) => {
-  //   const errors = {}
-  //   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i
-  //   if (!values.fname) {
-  //       formdataerror.fname = "FirstName is required"
-  //   }
-  //   if (!values.lname) {
-  //     formdataerror.lname = "LastName is required"
-  //   }
-  //   if (!values.myemail) {
-  //     formdataerror.myemail = "Email is required"
-  //   }
-  //   if (!values.pnumber) {
-  //     formdataerror.pnumber = "Phone number is required"
-  //   }
-  //   if (!values.mymessage) {
-  //     formdataerror.mymessage = "Message is required"
-  //   }
-  //   return errors;
-  // }
 
   return (
     <>
@@ -137,7 +87,6 @@ export default function Contactus() {
           </div>
 
           <form ref={form} onSubmit={handleSubmit}>
-            {/* <pre>{JSON.stringify(formdata, undefined, 2)}</pre> */}
             <div className='sectionThree my-lg-5 '>
               <div className='userinput container'>
                 <div className='namesfield d-flex flex-wrap justify-content-md-around'>
@@ -147,7 +96,8 @@ export default function Contactus() {
                     className='firstname my-2'
                     autoComplete='off'
                     required
-                  />
+                    />
+  
                   <input type='text'
                     name='lname'
                     placeholder='Last Name'
@@ -155,6 +105,7 @@ export default function Contactus() {
                     autoComplete='off'
                     required
                   />
+
                 </div>
                 <div className='namesfield d-flex  flex-wrap justify-content-md-center'>
                   <input type='email'
@@ -164,6 +115,7 @@ export default function Contactus() {
                     autoComplete='off'
                     required
                   />
+
                   <input type='number'
                     name='pnumber'
                     placeholder='Phone'
@@ -171,6 +123,7 @@ export default function Contactus() {
                     autoComplete='off'
                     required
                   />
+
                 </div>
                 <textarea id="w3review"
                   name="mymessage"
@@ -182,7 +135,7 @@ export default function Contactus() {
                 />
               </div>
               <div className='container sendmesgdiv'>
-                <button className='sendmessagebtn' disabled={pending ? true : false} >{pending ? "Loading..." : "SEND MESSAGE"}</button>
+                <button className='sendmessagebtn' disabled={pending ? true : false}  >{pending ? "Loading..." : "SEND MESSAGE"}</button>
               </div>
             </div>
           </form>
