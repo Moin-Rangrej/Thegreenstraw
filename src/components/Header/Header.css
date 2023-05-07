@@ -211,6 +211,7 @@ p{
 /* State when navbar is collapsed (START) */
 .navbar-toggler.collapsed .top-bar {
     transform: rotate(0);
+    color: #91C13A;
 }
 
 .navbar-toggler.collapsed .middle-bar {
@@ -224,8 +225,17 @@ p{
 /* State when navbar is collapsed (END) */
 
 /* Color of Toggler when collapsed */
-.navbar-toggler.collapsed .toggler-icon {
+/* .navbar-toggler.collapsed .toggler-icon {
     background-color: #91C13A;
+} */
+
+/* .navbar-toggler {
+    color: #91C13A;
+} */
+
+.navbar-light .navbar-toggler{
+    color: #91C13A; 
+    font-size: 35px;
 }
 
  .nav-item a.active{
@@ -239,8 +249,10 @@ p{
     }
  }
 
-
-
 .hides{
     display: none;
 }
+
+/* .show{
+    display: none;
+} */

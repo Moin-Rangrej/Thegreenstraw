@@ -46,7 +46,7 @@ export default function Home() {
                         <p className='Home_heading'>
                             Make each day <p> your masterpiece</p>
                         </p>
-                        <p className='Home_pera'>
+                        <p className='Home_pera mr-1'>
                             Amet minim mollit non deserunt ullamco est sit
                             <p>aliqua dolor do amet sint. Velit officia consequat duis</p>
                             <p>enim velit mollit. Exercitation veniam consequat sunt</p>
@@ -62,7 +62,7 @@ export default function Home() {
                 {/* Section2 start */}
 
                 <section className='section2'>
-                    <div className='greenstarw'>
+                    <div className='greenstarw m-1'>
                         <h1 className='greenstarwHeading text-center m-4'>
                             The Greenstraw
                         </h1>

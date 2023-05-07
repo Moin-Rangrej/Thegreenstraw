@@ -1,5 +1,5 @@
 // routes
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 
 // pages
 import './App.css';
@@ -31,15 +31,21 @@ import 'lightbox2/dist/css/lightbox.css'
 import 'lightbox2/dist/js/lightbox-plus-jquery'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import ScrollToTop from './ScrolltoTop';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { useEffect } from 'react';
+import "lightgallery/css/lightgallery.css"; 
 
 function App() {
-  
+
+    const { pathname } = useLocation()
+
+    useEffect(() => {
+        window.scrollTo({top: 0, left: 0, behavior:'instant'});
+    },[pathname])
+
   return (
     <div className="App">
-      {/* <ScrollToTop /> */}
       <Header/>
       <Routes>
         <Route path='/' element={<Home />}/>

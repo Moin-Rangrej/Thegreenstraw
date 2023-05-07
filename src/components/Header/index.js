@@ -1,17 +1,18 @@
 import React from 'react'
 import './Header.css'
 import Greenstrawlogo from '../../assets/images/GREENSTRAW-EMBLEM1.png'
-import { Link,NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { useState } from 'react'
 
 export default function Header() {
+
     const [show, setShow] = useState(false)
-    function handleClick(){
-        setShow(false)
-        console.log("onclick",show)
+
+
+    function handleClick() {
+        setShow(show => !show)
+        console.log("onclick", show)
     }
-
-
 
     return (
         <>
@@ -19,31 +20,34 @@ export default function Header() {
                 <nav className="navbar navbar-expand-lg navbar-light p-4 bg-dark fixed-top">
                     <div className='container-fluid'>
                         <div className='logoText'>
-                            <img src={Greenstrawlogo} alt='Greenstrawlogo' className='Greenstrawlogo'/>
+                            <img src={Greenstrawlogo} alt='Greenstrawlogo' className='Greenstrawlogo' />
                             <Link className="navbar-brand gsHeading" to='/'>THE GREENSTRAW</Link>
                         </div>
                         <button className="navbar-toggler collapsed" type="button" onClick={() => {
                             console.log(show)
-                        setShow(show => !show)}}  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            {/* <span className="navbar-toggler-icon" /> */}
-                            <span>
-                                {
-                                    show ? (
-                                        <i className="ri-close-line" /> ): ( <i className="ri-menu-line" />)
-                                    
-                                }
-                            </span>
+                            setShow(show => !show)
+                        }} data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="toggler-icon top-bar" />
+                            <span className="toggler-icon middle-bar" />
+                            <span className="toggler-icon bottom-bar" />
+
+                            {/* {
+                                show ? (
+                                    <i className="ri-close-line" />) : (<i className="ri-menu-line" />)
+
+                            } */}
+
                         </button>
 
-                        <div className= { show ? "collapse navbar-collapse hides" : "collapse navbar-collapse " } id="navbarSupportedContent"
-                            
+                        <div className={show ? "collapse navbar-collapse" : "collapse navbar-collapse"} id="navbarSupportedContent"
+
                         >
                             <ul className="navbar-nav ml-auto navbarPages">
                                 <li className="nav-item">
-                                    <NavLink className= "nav-link navbartitle"  to='/' onClick={handleClick} >Home</NavLink>
+                                    <NavLink className="nav-link navbartitle" to='/' onClick={handleClick} >Home</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link navbartitle" to='/aboutus'  onClick={handleClick} >About us</NavLink>
+                                    <NavLink className="nav-link navbartitle" to='/aboutus' onClick={handleClick} >About us</NavLink>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <NavLink className="nav-link dropdown-toggle navbartitle" to='/services' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -58,13 +62,13 @@ export default function Header() {
                                     </div>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link navbartitle" to='/gallery'  onClick={handleClick}>Gallery</NavLink>
+                                    <NavLink className="nav-link navbartitle" to='/gallery' onClick={handleClick}>Gallery</NavLink>
                                 </li>
                             </ul>
                             <div className="form-inline my-2 my-lg-0">
-                            <Link to='/contactus'>
-                                <button className="contactbtn my-2 my-sm-0" type="submit"  onClick={handleClick}>Contact Us</button>
-                            </Link>    
+                                <Link to='/contactus'>
+                                    <button className="contactbtn my-2 my-sm-0" type="submit" onClick={handleClick}>Contact Us</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -73,4 +77,3 @@ export default function Header() {
         </>
     )
 }
-    
