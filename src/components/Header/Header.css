@@ -50,10 +50,23 @@ p{
 }
 
 @media screen and (min-width: 768px) {
+
+    .logoText{
+        margin: 0px 12px;
+    }
+
     .dropdown:hover .dropdown-menu{
         display: block;
     }
 }
+
+@media screen and (max-width: 768px) {
+
+    .logoText{
+        margin: 0px 12px;
+    }
+}
+
 
 
 
@@ -82,7 +95,7 @@ p{
     
     .Greenstrawlogo{
         height: 25px;
-        margin-left: 20px;
+        margin-left: 0px;
     }
    
     .gsHeading {
@@ -256,3 +269,6 @@ p{
 /* .show{
     display: none;
 } */
+
+/* change boostrap  navbar button collapse */
+

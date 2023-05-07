@@ -3,6 +3,7 @@ import './Header.css'
 import Greenstrawlogo from '../../assets/images/GREENSTRAW-EMBLEM1.png'
 import { Link, NavLink } from 'react-router-dom'
 import { useState } from 'react'
+import { faL } from '@fortawesome/free-solid-svg-icons'
 
 export default function Header() {
 
@@ -10,37 +11,45 @@ export default function Header() {
 
 
     function handleClick() {
-        setShow(show => !show)
+        setShow(false)
         console.log("onclick", show)
     }
 
     return (
         <>
             <div>
-                <nav className="navbar navbar-expand-lg navbar-light p-4 bg-dark fixed-top">
+                <nav className="navbar navbar-expand-xl navbar-light p-4 bg-dark fixed-top">
                     <div className='container-fluid'>
                         <div className='logoText'>
                             <img src={Greenstrawlogo} alt='Greenstrawlogo' className='Greenstrawlogo' />
                             <Link className="navbar-brand gsHeading" to='/'>THE GREENSTRAW</Link>
                         </div>
-                        <button className="navbar-toggler collapsed" type="button" onClick={() => {
-                            console.log(show)
-                            setShow(show => !show)
-                        }} data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="toggler-icon top-bar" />
-                            <span className="toggler-icon middle-bar" />
-                            <span className="toggler-icon bottom-bar" />
-
-                            {/* {
+                        <button className="navbar-toggler collapsed"
+                            type="button"
+                            onClick={() => {
+                                console.log(show)
+                                setShow(show => !show)
+                            }}
+                            data-toggle="collapse"
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            {
                                 show ? (
                                     <i className="ri-close-line" />) : (<i className="ri-menu-line" />)
-
-                            } */}
+                            }
 
                         </button>
 
-                        <div className={show ? "collapse navbar-collapse" : "collapse navbar-collapse"} id="navbarSupportedContent"
-
+                        <div
+                            className={
+                                show 
+                                ?   "collapse navbar-collapse"
+                                    : "collapse navbar-collapse hides"
+                            }
+                            id="navbarSupportedContent"
                         >
                             <ul className="navbar-nav ml-auto navbarPages">
                                 <li className="nav-item">
