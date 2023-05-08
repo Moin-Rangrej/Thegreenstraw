@@ -3,15 +3,17 @@ import './Header.css'
 import Greenstrawlogo from '../../assets/images/GREENSTRAW-EMBLEM1.png'
 import { Link, NavLink } from 'react-router-dom'
 import { useState } from 'react'
-import { faL } from '@fortawesome/free-solid-svg-icons'
 
 export default function Header() {
+
+    
 
     const [show, setShow] = useState(false)
 
 
     function handleClick() {
         setShow(false)
+        window.scrollTo({top: 0, left: 0, behavior:'auto'});
         console.log("onclick", show)
     }
 
@@ -22,7 +24,7 @@ export default function Header() {
                     <div className='container-fluid'>
                         <div className='logoText'>
                             <img src={Greenstrawlogo} alt='Greenstrawlogo' className='Greenstrawlogo' />
-                            <Link className="navbar-brand gsHeading" to='/'>THE GREENSTRAW</Link>
+                            <Link className="navbar-brand gsHeading" to='/' onClick={handleClick}>THE GREENSTRAW</Link>
                         </div>
                         <button className="navbar-toggler collapsed"
                             type="button"
@@ -59,15 +61,15 @@ export default function Header() {
                                     <NavLink className="nav-link navbartitle" to='/aboutus' onClick={handleClick} >About us</NavLink>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <NavLink className="nav-link dropdown-toggle navbartitle" to='/services' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a className="nav-link dropdown-toggle navbartitle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Services
-                                    </NavLink>
+                                    </a>
                                     <div className="dropdown-menu " aria-labelledby="navbarDropdown">
-                                        <a className="dropdown-item dropdown-text" to='/services'>The Greenstraw Spaces</a>
-                                        <a className="dropdown-item dropdown-text" href="#store">Stores</a>
-                                        <a className="dropdown-item dropdown-text" href="#services">Cafes</a>
-                                        <a className="dropdown-item dropdown-text" href="#services">Co-working Space</a>
-                                        <a className="dropdown-item dropdown-text" href="#services">The Greenstraw Foundation</a>
+                                        <NavLink className="dropdown-item dropdown-text" to='/Greenstrawspace' onClick={handleClick}>The Greenstraw Spaces</NavLink>
+                                        <NavLink className="dropdown-item dropdown-text" to='/GreenstrawStore' onClick={handleClick}>Stores</NavLink>
+                                        <NavLink className="dropdown-item dropdown-text" to='/Greenstrawcafes' onClick={handleClick}>Cafes</NavLink>
+                                        <NavLink className="dropdown-item dropdown-text" to='/Greenstraw_working' onClick={handleClick}>Co-working Space</NavLink>
+                                        <NavLink className="dropdown-item dropdown-text" to='/Greenstraw_foundation' onClick={handleClick}>The Greenstraw Foundation</NavLink>
                                     </div>
                                 </li>
                                 <li className="nav-item">

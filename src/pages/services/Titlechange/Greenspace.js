@@ -1,13 +1,14 @@
 import React from 'react'
-import './services.css'
-import Men from '../../assets/images/servicePage/men.png'
-import chair from '../../assets/images/servicePage/chair.png'
-import Officesec from './Officesec'
+import '../services.css'
+// import Men from '../../assets/images/servicePage/men.png'
+import Men from '../../../assets/images/servicePage/men.png'
+import chair from '../../../assets/images/servicePage/chair.png'
+import Officesec from '../Officesec'
 
 
 
 
-export default function Services() {
+export default function Greenstrawspace() {
   return (
     <>
       <section className='Secrvicesection'>

@@ -9,17 +9,11 @@ const initialValues = {
   myemail: "",
   pnumber: "",
   mymessage: ""
-
 }
 
 export default function Contactus() {
 
   const [pending, setPending] = useState(false);
-  const [firstName, setFirstname] = useState("")
-  const [lastName, setlastname] = useState("")
-  const [email, setEmail] = useState("")
-  const [phonenumber, setPhonenumber] = useState("")
-  const [message, setMessage] = useState("")
 
   // console.log(firstName,lastName,email,phonenumber,message);
 
@@ -100,7 +94,6 @@ export default function Contactus() {
                   placeholder='First Name'
                   className='firstname my-2'
                   autoComplete='off'
-                  onChange={(e) => setFirstname(e.target.value)}
                   required
                 />
 
@@ -109,7 +102,6 @@ export default function Contactus() {
                   placeholder='Last Name'
                   className='firstname my-2'
                   autoComplete='off'
-                  onChange={(e) => setlastname(e.target.value)}
                   required
                 />
               </div>
@@ -121,7 +113,6 @@ export default function Contactus() {
                   placeholder='E-Mail'
                   className='firstname my-2'
                   autoComplete='off'
-                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
                 
@@ -131,7 +122,6 @@ export default function Contactus() {
                   placeholder='Phone'
                   className='firstname pnumber my-2'
                   autoComplete='off'
-                  onChange={(e) => setFirstname(e.target.value)}
                   required
                 />
               </div>
@@ -141,7 +131,6 @@ export default function Contactus() {
                 rows={2} cols={40}
                 className='message'
                 autoComplete='off'
-                onChange={(e) => setMessage(e.target.value)}
                 required
               />
             </div>

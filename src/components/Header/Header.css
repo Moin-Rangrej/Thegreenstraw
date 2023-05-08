@@ -254,6 +254,7 @@ p{
  .nav-item a.active{
     color: #91C13A !important;
     text-decoration: none;
+    background-color: transparent;
  }
 
  @media screen and (min-width: 576px) {

@@ -1,18 +1,19 @@
 import React from 'react'
-import './services.css'
-import Men from '../../assets/images/servicePage/men.png'
-import chair from '../../assets/images/servicePage/chair.png'
-import Officesec from './Officesec'
+import '../services.css'
+// import Men from '../../assets/images/servicePage/men.png'
+import Men from '../../../assets/images/servicePage/men.png'
+import chair from '../../../assets/images/servicePage/chair.png'
+import Officesec from '../Officesec'
 
 
 
 
-export default function Services() {
+export default function GreenstrawStore() {
   return (
     <>
       <section className='Secrvicesection'>
         <div className='services'>
-          <h2 className='serviceHeading'>The Greenstraw Spaces</h2>
+          <h2 className='serviceHeading'>The Greenstraw Store</h2>
           <p className='servicePera'>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
             <p>Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt</p>

@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState,useRef } from 'react'
 import './Home.css'
-import Layout from '../../components/Layout'
 import Serviceicon from '../../assets/images/Services/service.png'
 import Cafeicon from '../../assets/images/Services/cafe.png'
 import Workingicon from '../../assets/images/Services/workingspace.png'
@@ -8,8 +7,9 @@ import Restaurant from '../../assets/images/Services/Restaurant.png'
 import Client from '../../assets/images/client.png'
 import Leftcout from '../../assets/images/Services/leftd_cout.png'
 import Rigthcout from '../../assets/images/Services/rigthd_cout.png'
-import place from '../../assets/images/Services/place.png'
 import Overlay from './Overlay'
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 
 
@@ -18,6 +18,8 @@ export default function Home() {
     const [arrow1, setarrow1] = useState(false)
     const [arrow2, setarrow2] = useState(false)
     const [arrow3, setarrow3] = useState(false)
+  const [pending, setPending] = useState(false);
+
 
 
     const updateArrow = () => {
@@ -37,6 +39,44 @@ export default function Home() {
         setarrow3(arrow3 => !arrow3)
     }
 
+    const form = useRef();;
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setPending(true)
+
+    emailjs.sendForm('service_esvxnjn', 'template_a7zz0k8', form.current, 'OkVIJxe-D8Zvw-Fni')
+      .then((result) => {
+        setPending(false)
+        toast.success('Email send successfull', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        form.current.reset()
+        console.log("Email status:", result.text);
+      }, (error) => {
+        setPending(false)
+        toast.error('Error accured go console', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        console.log("Error accured: ", error.text);
+        form.current.reset()
+      });
+  };
+  console.log(form.current);
     return (
         <>
             <>
@@ -223,7 +263,7 @@ export default function Home() {
 
                 {/* Section5 start here */}
 
-                <Overlay/>
+                <Overlay />
 
                 {/* Section5 end here */}
 
@@ -255,10 +295,12 @@ export default function Home() {
                             <p className='subscribePera'>Subscribe to our newsletter</p>
                         </div>
 
-                        <div className='inputbox d-flex justify-content-center align-items-center '>
-                            <input type='email' placeholder='Enter your E-mail Address' className='inputmail py-2' id='email'/>
-                            <button className='subscribebtn'>Subscribe</button>
-                        </div>
+                            <form ref={form} onSubmit={handleSubmit}>
+                            <div className='inputbox d-flex justify-content-center align-items-center '>
+                                <input type='email' name='myemail' autoComplete='off'  placeholder='Enter your E-mail Address' className='inputmail py-2' id='email' required/>
+                                <button className='subscribebtn'> {pending ? "Loading..." : "Subscribe"}</button>
+                            </div>
+                            </form>     
                     </div>
 
                 </div>

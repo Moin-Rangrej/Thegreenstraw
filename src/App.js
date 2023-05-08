@@ -1,5 +1,5 @@
 // routes
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 // pages
 import './App.css';
@@ -20,9 +20,12 @@ import Cowork2 from './pages/gallery2/Cowork2';
 import Store2 from './pages/gallery2/Store2';
 import Overlay2 from './pages/Aboutus/Overlay2';
 import Officesec from './pages/services/Officesec';
-import Layout from './components/Layout';
 import Minmax from './Minmax';
-
+import Greenstrawspace from './pages/services/Titlechange/Greenspace';
+import GreenstrawStore from './pages/services/Titlechange/Stores';
+import Greenstrawcafes from './pages/services/Titlechange/Cafes';
+import Greenstraw_working from './pages/services/Titlechange/Cowoorking';
+import Greenstraw_foundation from './pages/services/Titlechange/Foundation';
 
 // external library add
 import "slick-carousel/slick/slick.css";
@@ -33,27 +36,35 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { useEffect } from 'react';
-import "lightgallery/css/lightgallery.css"; 
+import "lightgallery/css/lightgallery.css";
+import { Helmet } from "react-helmet";
 
 function App() {
 
-    const { pathname } = useLocation()
-
-    useEffect(() => {
-        window.scrollTo({top: 0, left: 0, behavior:'instant'});
-    },[pathname])
 
   return (
     <div className="App">
-      <Header/>
+
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>The Greenstraw</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+        <meta name="description" content="Test icon" />
+      </Helmet>
+
+      <Header />
       <Routes>
-        <Route path='/' element={<Home />}/>
+        <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/aboutus' element={<Aboutus />} />
         <Route path='/services' element={<Services />} />
         <Route path='/overlay' element={<Overlay2 />} />
         <Route path='/officesec' element={<Officesec />} />
+        <Route path='/Greenstrawspace' element={<Greenstrawspace />} />
+        <Route path='/GreenstrawStore' element={<GreenstrawStore />} />
+        <Route path='/Greenstrawcafes' element={<Greenstrawcafes />} />
+        <Route path='/Greenstraw_working' element={<Greenstraw_working />} />
+        <Route path='/Greenstraw_foundation' element={<Greenstraw_foundation />} />
         <Route path='/minmax' element={<Minmax />} />
         <Route path='/gallery' element={<Gallery2 />}>
           <Route index element={<All2 />} />
