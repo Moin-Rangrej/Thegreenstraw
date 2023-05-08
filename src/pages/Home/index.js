@@ -10,6 +10,8 @@ import Rigthcout from '../../assets/images/Services/rigthd_cout.png'
 import Overlay from './Overlay'
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import { NavLink } from 'react-router-dom'
+import ScrollToTop from '../../ScrolltoTop'
 
 
 
@@ -18,7 +20,14 @@ export default function Home() {
     const [arrow1, setarrow1] = useState(false)
     const [arrow2, setarrow2] = useState(false)
     const [arrow3, setarrow3] = useState(false)
-  const [pending, setPending] = useState(false);
+    const [pending, setPending] = useState(false)
+    const [show, setShow] = useState(false)
+
+    function handleClick() {
+        // setShow(false)
+        window.scrollTo({top: 0, left: 0, behavior:'auto'});
+        // console.log("onclick", show)
+    }
 
 
 
@@ -139,9 +148,11 @@ export default function Home() {
                                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                                 Velit officia consequat duis enim velit mollit.
                             </p>
+                            <NavLink to='/GreenstrawStore' onClick={handleClick}>
                             <button className='servicebtn m-3'>
                                 View
                             </button>
+                            </NavLink>
                         </div>
                         <div className='stores text-center p-5'>
                             <img src={Cafeicon} />
@@ -152,9 +163,11 @@ export default function Home() {
                                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                                 Velit officia consequat duis enim velit mollit.
                             </p>
-                            <button className='servicebtn m-3'>
+                            <NavLink to='/Greenstrawcafes' >
+                            <button className='servicebtnTwo m-3' onClick={handleClick}>
                                 View
                             </button>
+                            </NavLink>
                         </div>
                         <div className='stores text-center p-5'>
                             <img src={Workingicon} />
@@ -165,9 +178,11 @@ export default function Home() {
                                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                                 Velit officia consequat duis enim velit mollit.
                             </p>
-                            <button className='servicebtn m-3'>
+                            <NavLink to='/Greenstraw_working'>
+                            <button className='servicebtnTwo m-3' onClick={handleClick}>
                                 View
                             </button>
+                            </NavLink>
                         </div>
 
                     </div>

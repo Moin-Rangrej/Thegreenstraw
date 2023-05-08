@@ -217,12 +217,29 @@
     background: #91C13A;
     border: 1px solid #91C13A;
     border-radius: 4px;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.25rem;
     line-height: 30px;
     letter-spacing: 0.01em;
     color: #FFFFFF;
     padding: 5px 40px;
+}
+
+.servicebtnTwo {
+    background: transparent;
+    border: 1px solid #91C13A;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #91C13A;
+    padding: 5px 40px;
+}
+
+.servicebtnTwo:hover {
+    background: #91C13A;
+    color: #FFFFFF;
 }
 
 @media only screen and (max-width: 768px) {
