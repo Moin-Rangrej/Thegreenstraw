@@ -57,6 +57,7 @@ export default function Header() {
                                 <li className="nav-item">
                                     <NavLink className="nav-link navbartitle" to='/' onClick={handleClick} >Home</NavLink>
                                 </li>
+                                
                                 <li className="nav-item">
                                     <NavLink className="nav-link navbartitle" to='/aboutus' onClick={handleClick} >About us</NavLink>
                                 </li>
