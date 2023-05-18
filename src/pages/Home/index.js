@@ -206,7 +206,7 @@ export default function Home() {
                                 <div className="card">
                                     <div className="card-header" id="headingOne">
                                         <h5 className="mb-0">
-                                            <button className="btn btn-link " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <button className="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                 <i className={arrow ? "fa fa-chevron-circle-right pr-3 accordianArrow" : "fa fa-chevron-circle-down pr-3 accordianArrow"} onClick={updateArrow} aria-hidden="true" />
                                                 <span className={arrow ? " pr-3 accordianArrow myaccordion" : " pr-3 accordianArrow myaccordion"} onClick={updateArrow}>Events and Workshops</span>
                                             </button>
