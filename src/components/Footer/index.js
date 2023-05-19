@@ -32,7 +32,9 @@ export default function Footer() {
         <>
             <div className='footerParent '>
                 <div className=' px-5 py-2 row'>
-                    <div className='child1 col-lg-4 my-3'>
+                    <div className='child1 col-lg-4 my-3' data-aos="fade-right"
+                        data-aos-duration="3000"
+                    >
                         <div className='gsImages my-2'>
                             <img src={GSimage} className='Thegreenstarw ' />
                             <h1 className="navbar-brand gsHeading ml-2">THE GREENSTRAW</h1>
@@ -43,7 +45,7 @@ export default function Footer() {
                             to bring about a sustainable behavioral change.
                         </p>
                     </div>
-                    <div className='child2 col-lg-3 my-3'>
+                    <div className='child2 col-lg-3 my-3' data-aos="zoom-out">
                         <div className='footertwo'>
                             <p className='getintouch'>GET IN TOUCH</p>
                             <div className='Addressdiv'>
@@ -73,7 +75,9 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className='col-lg-5 my-3 gtr_gallery'>
+                    <div className='col-lg-5 my-3 gtr_gallery' data-aos="fade-left"
+                        data-aos-duration="3000"
+                    >
                         <h1 className='text-white getintouch pb-2'>GALLERY</h1>
                         <div className='galleryFirst d-flex flex-wrap'>
                             <LightGallery
@@ -115,9 +119,11 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <hr className='hrline mx-5' />
+                <hr className='hrline mx-5'/>
                 <div className='row'>
-                    <h1 className='copyright col-12'>
+                    <h1 className='copyright col-12'
+                    
+                    >
                         © 2022 The Greenstraw.  All rights reserved.
                     </h1>
                 </div>

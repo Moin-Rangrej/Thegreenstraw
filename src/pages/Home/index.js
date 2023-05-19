@@ -1,4 +1,4 @@
-import React, { useState,useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import './Home.css'
 import Serviceicon from '../../assets/images/Services/service.png'
 import Cafeicon from '../../assets/images/Services/cafe.png'
@@ -11,7 +11,8 @@ import Overlay from './Overlay'
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 import { NavLink } from 'react-router-dom'
-import ScrollToTop from '../../ScrolltoTop'
+import Typical from 'react-typical'
+
 
 
 
@@ -25,7 +26,7 @@ export default function Home() {
 
     function handleClick() {
         // setShow(false)
-        window.scrollTo({top: 0, left: 0, behavior:'auto'});
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
         // console.log("onclick", show)
     }
 
@@ -50,59 +51,61 @@ export default function Home() {
 
     const form = useRef();;
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setPending(true)
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setPending(true)
 
-    emailjs.sendForm('service_esvxnjn', 'template_a7zz0k8', form.current, 'OkVIJxe-D8Zvw-Fni')
-      .then((result) => {
-        setPending(false)
-        toast.success('Email send successfull', {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        });
-        form.current.reset()
-        console.log("Email status:", result.text);
-      }, (error) => {
-        setPending(false)
-        toast.error('Error accured go console', {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        });
-        console.log("Error accured: ", error.text);
-        form.current.reset()
-      });
-  };
-  console.log(form.current);
+        emailjs.sendForm('service_esvxnjn', 'template_a7zz0k8', form.current, 'OkVIJxe-D8Zvw-Fni')
+            .then((result) => {
+                setPending(false)
+                toast.success('Email send successfull', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+                form.current.reset()
+                console.log("Email status:", result.text);
+            }, (error) => {
+                setPending(false)
+                toast.error('Error accured go console', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+                console.log("Error accured: ", error.text);
+                form.current.reset()
+            });
+    };
+    console.log(form.current);
     return (
         <>
             <>
                 {/* Section 1 start */}
                 <section className='homediv'>
-                    <div className='homedata'>
-                        <p className='Home_heading'>
-                            Make each day <p> your masterpiece</p>
-                        </p>
-                        <p className='Home_pera mr-1'>
-                            Amet minim mollit non deserunt ullamco est sit
-                            <p>aliqua dolor do amet sint. Velit officia consequat duis</p>
-                            <p>enim velit mollit. Exercitation veniam consequat sunt</p>
-                        </p>
-                        <button className='explorebtn'>
-                            Explore
-                        </button>
+                    <div className='homedata' >
+                        <div data-aos="fade-right">
+                            <p className='Home_heading'>
+                                Make each day <p> your masterpiece</p>
+                            </p>
+                            <p className='Home_pera mr-1'>
+                                Amet minim mollit non deserunt ullamco est sit
+                                <p>aliqua dolor do amet sint. Velit officia consequat duis</p>
+                                <p>enim velit mollit. Exercitation veniam consequat sunt</p>
+                            </p>
+                            <button className='explorebtn'>
+                                Explore
+                            </button>
+                        </div>
                     </div>
                 </section>
 
@@ -112,10 +115,10 @@ export default function Home() {
 
                 <section className='section2'>
                     <div className='greenstarw m-1'>
-                        <h1 className='greenstarwHeading text-center m-4'>
+                        <h1 className='greenstarwHeading text-center m-4' data-aos="fade-right">
                             The Greenstraw
                         </h1>
-                        <p className='greenstarwPera text-center px-3'>
+                        <p className='greenstarwPera text-center px-3' data-aos="fade-left">
                             The Greenstraw is an initiative to create a community of conscious and conscientious
                             individuals by curating low waste and interactive solutions to everyday things to
                             bring about a sustainable behavioral change.
@@ -130,16 +133,16 @@ export default function Home() {
                 <section className='section3' id='services'>
 
                     <div className='servicepage d-flex justify-content-center align-items-center flex-wrap'>
-                        <h1 className=' servicesHeading p-4'>
+                        <h1 className=' servicesHeading p-4' data-aos="fade-right">
                             Services We Offer
                         </h1>
-                        <p className='servicesPera'>
+                        <p className='servicesPera' data-aos="fade-left">
                             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                             Velit officia consequat duis enim velit mollit.
                         </p>
                     </div>
                     <div className='serviceType d-flex justify-content-center flex-wrap'>
-                        <div className='stores text-center p-5'>
+                        <div className='stores text-center p-5' data-aos="fade-right">
                             <img src={Serviceicon} />
                             <h1 className='serviceTypeHeading text-center p-3'>
                                 Store’s
@@ -149,12 +152,12 @@ export default function Home() {
                                 Velit officia consequat duis enim velit mollit.
                             </p>
                             <NavLink to='/GreenstrawStore' onClick={handleClick}>
-                            <button className='servicebtn m-3'>
-                                View
-                            </button>
+                                <button className='servicebtn m-3'>
+                                    View
+                                </button>
                             </NavLink>
                         </div>
-                        <div className='stores text-center p-5'>
+                        <div className='stores text-center p-5' data-aos="zoom-in">
                             <img src={Cafeicon} />
                             <h1 className='serviceTypeHeading text-center p-3'>
                                 Cafe’s
@@ -164,12 +167,12 @@ export default function Home() {
                                 Velit officia consequat duis enim velit mollit.
                             </p>
                             <NavLink to='/Greenstrawcafes' >
-                            <button className='servicebtnTwo m-3' onClick={handleClick}>
-                                View
-                            </button>
+                                <button className='servicebtnTwo m-3' onClick={handleClick}>
+                                    View
+                                </button>
                             </NavLink>
                         </div>
-                        <div className='stores text-center p-5'>
+                        <div className='stores text-center p-5' data-aos="fade-left">
                             <img src={Workingicon} />
                             <h1 className='serviceTypeHeading text-center py-3'>
                                 Co-Working Space
@@ -179,9 +182,9 @@ export default function Home() {
                                 Velit officia consequat duis enim velit mollit.
                             </p>
                             <NavLink to='/Greenstraw_working'>
-                            <button className='servicebtnTwo m-3' onClick={handleClick}>
-                                View
-                            </button>
+                                <button className='servicebtnTwo m-3' onClick={handleClick}>
+                                    View
+                                </button>
                             </NavLink>
                         </div>
 
@@ -195,10 +198,10 @@ export default function Home() {
 
                 <section className='section4 container'>
                     <div className='Faqsdiv row'>
-                        <div className='col-lg-6 restaurant py-5'>
+                        <div className='col-lg-6 restaurant py-5' data-aos="zoom-in-right">
                             <img src={Restaurant} alt='Restaurant' className='Restaurant ' />
                         </div>
-                        <div className='col-lg-6 Whatwedo py-5'>
+                        <div className='col-lg-6 Whatwedo py-5' data-aos="zoom-in-left">
                             <h3 className='text-left WhatwedoHeading'>
                                 What we do!
                             </h3>
@@ -286,16 +289,30 @@ export default function Home() {
 
                 <section className='section6'>
                     <div className='container peoplesaydiv'>
-                        <h1 className='peoplesayHead text-center pt-5'>
+                        <h1 className='peoplesayHead text-center pt-5' data-aos="fade-right">
                             What People Say
                         </h1>
-                        <img src={Leftcout} alt='Leftcout' className='Leftcout' />
-                        <p className='peoplesayPera text-center'>
+                        <img src={Leftcout} alt='Leftcout' className='Leftcout' data-aos="flip-left" />
+                        <p className='peoplesayPera text-center'
+                            data-aos="zoom-in"
+                            data-aos-duration="1700"
+                        >
                             We design and implement awareness campaigns by identifying various environmental factors that needs to be addressed in our communities
                         </p>
-                        <img src={Rigthcout} alt='Rigthcout' className='Rigthcout' />
-                        <img src={Client} className='rounded-circle py-3' />
-                        <h1 className='text-center clientname'>Patarika Goodman <p className='client'>Client</p></h1>
+                        <img src={Rigthcout} alt='Rigthcout' className='Rigthcout' data-aos="flip-right" />
+                        <img src={Client} className='rounded-circle py-3' data-aos="flip-left" />
+                        <h1 className='text-center ladiesclientname'
+                            data-aos="zoom-in"
+                            data-aos-duration="1700"
+                        >Patarika Goodman <p className='client'>Client</p></h1>
+                        {/* <h1 className='text-center clientname'>
+                        <Typical
+                        steps={['Patarika Goodman Client', 1000]}
+                        loop={Infinity}
+                        wrapper="p"
+                    />
+                        </h1> */}
+
                     </div>
                 </section>
 
@@ -305,17 +322,17 @@ export default function Home() {
 
                 <div className='section7 my-5'>
                     <div className='container d-flex  flex-wrap'>
-                        <div className='stayconnect pt-5'>
+                        <div className='stayconnect pt-5' data-aos="zoom-in-right">
                             STAY <p className='connect'>CONNECTED</p>
                             <p className='subscribePera'>Subscribe to our newsletter</p>
                         </div>
 
-                            <form ref={form} onSubmit={handleSubmit}>
+                        <form ref={form} onSubmit={handleSubmit}>
                             <div className='inputbox d-flex justify-content-center align-items-center '>
-                                <input type='email' name='myemail' autoComplete='off'  placeholder='Enter your E-mail Address' className='inputmail py-2' id='email' required/>
-                                <button className='subscribebtn'> {pending ? "Loading..." : "Subscribe"}</button>
+                                <input type='email' name='myemail' autoComplete='off' placeholder='Enter your E-mail Address' className='inputmail py-2' id='email' required data-aos="zoom-out" />
+                                <button className='subscribebtn' data-aos="zoom-in-left"> {pending ? "Loading..." : "Subscribe"}</button>
                             </div>
-                            </form>     
+                        </form>
                     </div>
 
                 </div>
@@ -325,12 +342,21 @@ export default function Home() {
                 {/* section8 start here */}
 
                 <section className='section8 container'>
-                    <div className='clientsnames d-flex justify-content-between flex-wrap py-5 my-3'>
-                        <h1 className='clientname'>Cameron <p>Williamson</p></h1>
-                        <h1 className='clientname'>Leslie <p>Alexander</p></h1>
-                        <h1 className='clientname'>Darlene <p>Robertson</p></h1>
-                        <h1 className='clientname'>Kathryn <p>Murphy</p></h1>
-                        <h1 className='clientname'>Darlene <p>Robertson</p></h1>
+                    <div className='clientsnames d-flex justify-content-between align-items-center flex-wrap py-5 my-3'>
+                        <h1 className='clientname' data-aos="fade-right">Cameron <p>Williamson</p></h1>
+                        <h1 className='clientname'
+                            data-aos="fade-down-right"
+                            data-aos-duration="2000"
+                        >Leslie <p>Alexander</p></h1>
+                        <h1 className='clientname'
+                            data-aos="zoom-in"
+                            data-aos-duration="2200"
+                        >Darlene <p>Robertson</p></h1>
+                        <h1 className='clientname'
+                            data-aos="fade-up-left"
+                            data-aos-duration="2000"
+                        >Kathryn <p>Murphy</p></h1>
+                        <h1 className='clientname' data-aos="fade-left">Darlene <p>Robertson</p></h1>
                     </div>
                 </section>
 

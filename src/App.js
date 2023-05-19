@@ -1,5 +1,6 @@
 // routes
 import { Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react';
 
 // pages
 import './App.css';
@@ -27,6 +28,7 @@ import Greenstrawcafes from './pages/services/Titlechange/Cafes';
 import Greenstraw_working from './pages/services/Titlechange/Cowoorking';
 import Greenstraw_foundation from './pages/services/Titlechange/Foundation';
 
+
 // external library add
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -38,9 +40,26 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import "lightgallery/css/lightgallery.css";
 import { Helmet } from "react-helmet";
+import 'aos/dist/aos.css'
+import 'aos/dist/aos.js'
+import Aos from 'aos';
+import { useEffect } from 'react'
+import Loader from './Loader';
 
 function App() {
 
+  const [Loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    Aos.init({ duration: 1500, easing: 'ease-in-out', once: true })
+  }, [])
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+  }, [])
 
   return (
     <div className="App">
@@ -52,38 +71,38 @@ function App() {
         <meta name="description" content="Test icon" />
       </Helmet>
 
-      <Header />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/home' element={<Home />} />
-        <Route path='/aboutus' element={<Aboutus />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/overlay' element={<Overlay2 />} />
-        <Route path='/officesec' element={<Officesec />} />
-        <Route path='/Greenstrawspace' element={<Greenstrawspace />} />
-        <Route path='/GreenstrawStore' element={<GreenstrawStore />} />
-        <Route path='/Greenstrawcafes' element={<Greenstrawcafes />} />
-        <Route path='/Greenstraw_working' element={<Greenstraw_working />} />
-        <Route path='/Greenstraw_foundation' element={<Greenstraw_foundation />} />
-        <Route path='/minmax' element={<Minmax />} />
-        <Route path='/gallery' element={<Gallery2 />}>
-          <Route index element={<All2 />} />
-          <Route path='all2' element={<All2 />} />
-          <Route path='cafes2' element={<Cafes2 />} />
-          <Route path='cowork2' element={<Cowork2 />} />
-          <Route path='store2' element={<Store2 />} />
-        </Route>
+      {
+        Loading ? (<Loader />) :
+          (
+            <>
+              <Header />
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/home' element={<Home />} />
+                <Route path='/aboutus' element={<Aboutus />} />
+                <Route path='/services' element={<Services />} />
+                <Route path='/overlay' element={<Overlay2 />} />
+                <Route path='/officesec' element={<Officesec />} />
+                <Route path='/Greenstrawspace' element={<Greenstrawspace />} />
+                <Route path='/GreenstrawStore' element={<GreenstrawStore />} />
+                <Route path='/Greenstrawcafes' element={<Greenstrawcafes />} />
+                <Route path='/Greenstraw_working' element={<Greenstraw_working />} />
+                <Route path='/Greenstraw_foundation' element={<Greenstraw_foundation />} />
+                <Route path='/minmax' element={<Minmax />} />
+                <Route path='/gallery' element={<Gallery2 />}>
+                  <Route index element={<All2 />} />
+                  <Route path='all2' element={<All2 />} />
+                  <Route path='cafes2' element={<Cafes2 />} />
+                  <Route path='cowork2' element={<Cowork2 />} />
+                  <Route path='store2' element={<Store2 />} />
+                </Route>
+                <Route path='/contactus/' element={<Contactus />} />
+              </Routes>
+              <Footer />
+            </>
+          )}
 
-        {/* <Route path='/gallery' element={<Gallery />}>
-          <Route index element={<All/>}/>
-          <Route path='all' element={<All />} />
-          <Route path='cafes' element={<Cafes />} />
-          <Route path='cowork' element={<Cowork />} />
-          <Route path='store' element={<Store />} />
-        </Route> */}
-        <Route path='/contactus/' element={<Contactus />} />
-      </Routes>
-      <Footer />
+
       <ToastContainer
         position="top-right"
         autoClose={5000}

@@ -1,17 +1,24 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './Header.css'
 import Greenstrawlogo from '../../assets/images/GREENSTRAW-EMBLEM1.png'
 import { Link, NavLink } from 'react-router-dom'
 import { useState } from 'react'
+import Loader from '../../Loader'
+
 
 export default function Header() {
 
+    const [Loading , setLoading] = useState(false)
     
 
     const [show, setShow] = useState(false)
 
 
     function handleClick() {
+        setLoading(true)
+        setTimeout(() => {
+          setLoading(false)
+        }, 2000)
         setShow(false)
         window.scrollTo({top: 0, left: 0, behavior:'auto'});
         console.log("onclick", show)
@@ -19,7 +26,9 @@ export default function Header() {
 
     return (
         <>
-            <div>
+            {
+                Loading ? (<Loader />) :    
+                (<div>
                 <nav className="navbar navbar-expand-xl navbar-light p-4 bg-dark fixed-top">
                     <div className='container-fluid'>
                         <div className='logoText'>
@@ -85,7 +94,7 @@ export default function Header() {
                         </div>
                     </div>
                 </nav>
-            </div>
+            </div>)}
         </>
     )
 }

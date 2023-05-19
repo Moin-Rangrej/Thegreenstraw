@@ -3,13 +3,7 @@ import './contactus.css'
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 
-const initialValues = {
-  fname: "",
-  lname: "",
-  myemail: "",
-  pnumber: "",
-  mymessage: ""
-}
+
 
 export default function Contactus() {
 
@@ -67,8 +61,8 @@ export default function Contactus() {
     <>
       <section className='contactussec'>
         <div className='contactBG'>
-          <h2 className='contactHeading'>Contact Us</h2>
-          <p className='contactPera'>
+          <h2 className='contactHeading' data-aos="fade-right">Contact Us</h2>
+          <p className='contactPera' data-aos="fade-left">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
             <p>Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt</p>
           </p>
@@ -78,16 +72,16 @@ export default function Contactus() {
 
         <div className='sectiontwo container'>
           <div className='row my-5'>
-            <h1 className='getTouch col-lg-4'>GET IN TOUCH</h1>
-            <div className="vl px-2" />
-            <p className='available col-lg-7'>We are available 24/7 by fax, e-mail or by phone. You can also use our
+            <h1 className='getTouch col-lg-4' data-aos="fade-right">GET IN TOUCH</h1>
+            <div className="vl px-2" data-aos="zoom-in"/>
+            <p className='available col-lg-7' data-aos="fade-left">We are available 24/7 by fax, e-mail or by phone. You can also use our
               quick contact form to ask a question about our products.</p>
           </div>
         </div>
 
         <form ref={form} onSubmit={handleSubmit}>
-          <div className='sectionThree my-lg-5 '>
-            <div className='userinput container'>
+          <div className='sectionThree my-lg-5'>
+            <div className='userinput container' data-aos="zoom-out">
               <div className='namesfield d-flex flex-wrap justify-content-md-around'>
                 <input type='text'
                   name='fname'
@@ -134,7 +128,7 @@ export default function Contactus() {
                 required
               />
             </div>
-            <div className='container sendmesgdiv'>
+            <div className='container sendmesgdiv' data-aos="zoom-in">
               <button className='sendmessagebtn' disabled={pending ? true : false}  >{pending ? "Loading..." : "SEND MESSAGE"}</button>
             </div>
           </div>
@@ -143,19 +137,19 @@ export default function Contactus() {
 
         <div className='infoBG row'>
           <div className='container d-flex flex-wrap'>
-            <div className='col-lg-4  companyInfo phoneinfo'>
+            <div className='col-lg-4  companyInfo phoneinfo' data-aos="flip-left">
               <h1 className='ownerInfo'>Phones</h1>
               <hr className='hrline2' />
               <p>Office +1 (409) 987–5874</p>
               <p>Fax +1 (409) 987–5874</p>
             </div>
-            <div className='col-lg-4 companyInfo phoneinfo'>
+            <div className='col-lg-4 companyInfo phoneinfo' data-aos="zoom-in">
               <h1 className='ownerInfo'>ADDRESS</h1>
               <hr className='hrline2' />
               <p>523 Sylvan Ave, 5th Floor</p>
               <p>Mountain View, CA 94041 USA</p>
             </div>
-            <div className='col-lg-4 companyInfo phoneinfo'>
+            <div className='col-lg-4 companyInfo phoneinfo' data-aos="flip-right">
               <h1 className='ownerInfo'>E-MAILS</h1>
               <hr className='hrline2' />
               <p>info@demolink.org</p>
